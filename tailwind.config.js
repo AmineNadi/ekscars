@@ -2,7 +2,7 @@
 module.exports = {
   mode:'jit',
   content: [
-    './index.html', 
+    './**/*.html', 
     './**/*.php',
     './assets/**/*.{html,js,php}', 
   ],

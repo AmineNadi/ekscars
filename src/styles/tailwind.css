@@ -32,39 +32,22 @@
     font-style: normal;
 }
 html {
-    overflow-x: hidden;
-}
-/* Typography */
-h1 {
-    @apply text-h1 max-[991px]:text-h1-md max-[479px]:text-h1-sm;
-}
-h2 {
-    @apply text-h2 max-[991px]:text-h2-md max-[479px]:text-h2-sm;
+    @apply overflow-x-hidden;
 }
 body {
     @apply font-grandis;
 }
+
 /* Component */
-.card {
-    @apply flex flex-col items-center justify-center text-center max-w-[206px];
-}
 
-.card-icon {
-    @apply flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-[767px]:mb-[30px];
-}
-
-.card-title {
-    @apply mb-5 font-grandis-md text-[26px] leading-[26px] max-[767px]:text-[20px];
-}
-
-.card-text {
-    @apply font-grandis text-[16px] leading-[26px] text-secondary max-[767px]:text-sm;
-}
 .container {
-    @apply max-w-[1352px] mx-auto px-[25px] sm:px-[40px] lg:px-[60px];
+    @apply md:px-[40px] lg:px-[60px] xl:px-[104px];
 }
+
+
+
 .link-nav {
-    @apply text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-primary ;
+    @apply text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500 ;
 }
 .overlay-hero {
     background: linear-gradient(358.34deg, rgba(0, 0, 0, 0.52) 1.3%, rgba(0, 0, 0, 0.44) 42.68%, #040100 89.35%); 
@@ -105,7 +88,7 @@ body {
     font-size: 13px;
     line-height: 16.64px;
     color: #959595;
-    padding-left: 12px;
+    padding-left: 25px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 100%;
@@ -144,7 +127,7 @@ body {
     margin: 0;
     padding: 0!important;
     width: 140px !important;
-    @apply rounded-[5px] border-solid border-[1px] border-secondary p-[15px] outline-none h-[50px];
+    @apply rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px];
 }
 .country-select .select2-container .select2-selection--single {
     padding: 18px;
@@ -164,7 +147,7 @@ body {
     }
 }
 .links-footer {
-    @apply font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-primary transition-colors duration-300;
+    @apply font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300;
 }
 .nav-right .select2-container--default .select2-selection--single .select2-selection__arrow{
 
@@ -188,8 +171,9 @@ div.dropdown {
     position: relative;
 }
 
-
-
+.hero-splide .splide__pagination li:nth-child(-n+3) {
+    display: none
+}
 
 
 

@@ -1,20 +1,15 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: resolve(__dirname, 'src'), 
-  build: {
-    outDir: resolve(__dirname, 'dist'), 
-    emptyOutDir: true, 
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'src/index.html'),
-        details: resolve(__dirname, 'src/details.html'), 
-        vehicules: resolve(__dirname, 'src/vehicles.html'),
-      },
-    },
-  },
   server: {
-    port: 3060, 
+    port: 3000, // Change the dev server port
+    open: true, // Open browser automatically
   },
+  build: {
+    outDir: "dist", // Output directory
+  },
+  css: {
+    postcss: "./postcss.config.js", // Explicitly define PostCSS config
+  },
+  base: "./", // Base path for deployment
 });

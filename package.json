@@ -1,16 +1,23 @@
 {
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.1.0"
-  },
+  "name": "ekscars",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "postcss-nested": "^7.0.2",
+    "postcss-nesting": "^13.0.1",
+    "vite": "^6.1.0"
+  },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "@tailwindcss/vite": "^4.0.6",
+    "tailwindcss": "^3.4.17"
   }
 }

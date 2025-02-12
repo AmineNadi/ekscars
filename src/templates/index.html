@@ -4,12 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles/lib/select2.css">
-        <link rel="stylesheet" href="styles/lib/splide.css">
-        <link rel="stylesheet" href="styles/lib/flatpicker.css">
-        <link rel="stylesheet" href="styles/tailwind.css">
+        <title>Ekscars</title>
         
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/lib/alpine.js"></script>
+        <script src="./js/lib/slimSelect.js"></script>
+        <script src="./js/lib/splide.js"></script>
+        <script src="./js/lib/flatpicker.js"></script>
     </head>
     <body class="font-grandis overflow-x-hidden" x-data="{ open: false, atTop: false }" :class="{ 'max-[1024px]:h-svh fixed overflow-hidden': open }">
 
@@ -17,7 +18,7 @@
             <div class="container">
                 <div class="flex justify-between items-center">
                     <a href="/index.html">
-                        <img src="assets/img/svg/logo.svg" alt="">
+                        <img src="img/svg/logo.svg" alt="">
                     </a>
                     <nav class="max-lg:fixed max-lg:inset-0 max-lg:bg-black max-lg:z-[999] max-lg:p-10  max-lg:w-full max-lg:h-svh" :class="{'max-lg:translate-x-0 ': open, 'max-lg:-translate-x-full': !open}" x-transition>
                         <ul class="flex space-x-[35px] max-lg:flex-col max-lg:space-y-[35px] max-lg:space-x-0">
@@ -27,23 +28,20 @@
                             <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Promotions</a></li>
                             <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">News</a></li>
                             <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">My Budget</a></li>
-                            <div class="nav-right flex flex-col gap-y-[32px] lg:hidden">
-                                <select
-                                    name="price-switch"
-                                    id="price-v"
-                                    class="price appearance-none cursor-pointer text-sm text-white bg-transparent outline-none"
-                                    data-select='{
-                                        "minimumResultsForSearch": -1,
-                                        "allowClear": false
-                                    }'>
-                                    <option class="bg-transparent text-gray-700" value="euro">EURO | €</option>
-                                    <option class="bg-transparent text-gray-700" value="dollar">DOLLAR | $</option>
-                                    <option class="bg-transparent text-gray-700" value="mad">MAD | DH</option>
-                                </select>
+                            <div class="nav-right flex flex-col gap-y-[32px] lg:hidden [&>.price>.ss-arrow]:hidden">
+                              <select
+                                  name="price-switch"
+                                  id="price-v"
+                                  class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                                  >
+                                  <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
+                                  <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
+                                  <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
+                              </select>
             
                                 <div class="currency-switcher">
-                                    <div class="dropdown">
-                                        <div class="caption">
+                                    <div class="dropdown relative">
+                                        <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[5px] flex items-center text-white">
                                             
 
                                             <span>EN</span>
@@ -64,8 +62,8 @@
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div class="list">
-                                        <div class="item selected" data-item="EN">
+                                        <div class="list [&>.selected]:bg-[rgba(36,60,187,0.2)] [&>.selected]:pointer-events-none">
+                                        <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
                                             
 
                                             <span>EN</span>
@@ -86,7 +84,7 @@
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div class="item" data-item="FR">
+                                        <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
                                             
                                             <span>FR</span>
                                             <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
@@ -105,24 +103,21 @@
                         
                     </nav>
                     
-                    <div class="nav-right flex gap-y-[32px] max-lg:hidden mb-[-5px]">
+                    <div class="nav-right flex items-center gap-[32px] max-lg:hidden mb-[-5px] [&>.price>.ss-arrow]:hidden">
                         <select
                             name="price-switch"
                             id="price"
-                            class="price appearance-none cursor-pointer text-sm text-white bg-transparent outline-none"
-                            data-select='{
-                                "minimumResultsForSearch": -1,
-                                "allowClear": false
-                            }'>
-                            <option class="bg-transparent text-gray-700" value="euro">EURO | €</option>
-                            <option class="bg-transparent text-gray-700" value="dollar">DOLLAR | $</option>
-                            <option class="bg-transparent text-gray-700" value="mad">MAD | DH</option>
+                            class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                            >
+                            <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
+                            <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
+                            <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
                         </select>
 
                         
                         <div class="currency-switcher">
-                            <div class="dropdown">
-                                <div class="caption">
+                            <div class="dropdown relative">
+                                <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[6px] flex items-center text-white">
                                     
 
                                     <span>EN</span>
@@ -144,7 +139,7 @@
                                     </svg>
                                 </div>
                                 <div class="list">
-                                <div class="item selected" data-item="EN">
+                                <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
                                     
 
                                     <span>EN</span>
@@ -165,7 +160,7 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <div class="item" data-item="FR">
+                                <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
                                     
                                     <span>FR</span>
                                     <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
@@ -190,7 +185,7 @@
         
         <main>
             <section id="hero" class="pt-[246px] pb-[78px] relative max-[480px]:pt-[180px] bg-cover bg-center bg-no-repeat transition-all duration-500">
-                <div class="overlay-hero"></div>
+                <div class="bg-[linear-gradient(358.34deg,rgba(0,0,0,0.52)_1.3%,rgba(0,0,0,0.44)_42.68%,#040100_89.35%)] transform-gpu scale-y-[-1] absolute inset-0 z-0"></div>
                 <div class="container max-w-full relative z-20">
                     <h1 class="sr-only">EKSCARS</h1>
                     <div class="splide hero-splide mb-120 max-md:mb-70" data-splide='{
@@ -200,15 +195,15 @@
                     }'>
                         <div class="splide__track">
                             <div class="splide__list">
-                                <div class="splide__slide text-center" data-bg="/assets/img/hero-bg.jpg">
+                                <div class="splide__slide text-center" data-bg="img/hero-bg.jpg">
                                     <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
                                     <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
                                 </div>
-                                <div class="splide__slide text-center" data-bg="/assets/img/hero-bg2.jpg">
+                                <div class="splide__slide text-center" data-bg="img/hero-bg2.jpg">
                                     <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
                                     <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
                                 </div>
-                                <div class="splide__slide text-center" data-bg="/assets/img/hero-bg3.png">
+                                <div class="splide__slide text-center" data-bg="img/hero-bg3.png">
                                     <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
                                     <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
                                 </div>
@@ -235,21 +230,15 @@
                                 <div class="grid grid-cols-2 gap-5 mb-[30px] max-md:grid-cols-1">
                                     <div>
                                         <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Pick-up</span>
-                                        <div class="relative ">
+                                        <div class="relative mb-[22px]">
                                             <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
                                             </svg>
                                                 
-                                            <select id="departure" class="airport-select" data-select='{
-                                                "data": [
-                                                    { "id": "CMN", "text": "Mohammed V International Airport (Casablanca)" },
-                                                    { "id": "RAK", "text": "Marrakech Menara Airport" },
-                                                    { "id": "AGA", "text": "Agadir Al Massira Airport" }
-                                                ],
-                                                "minimumResultsForSearch": -1,
-                                                "placeholder": "Select Airport"
-                                            }'>
-                                                
+                                            <select id="departure" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
+                                              <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                              <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
+                                              <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
                                             </select>
                                         </div>
 
@@ -282,20 +271,14 @@
                                     </div>
                                     <div>
                                         <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Drop-off</span>
-                                        <div class="relative ">
+                                        <div class="relative mb-[22px]">
                                             <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
                                             </svg>
-                                            <select id="arrival" class="airport-select" data-select='{
-                                                "data": [
-                                                    { "id": "CMN", "text": "Mohammed V International Airport (Casablanca)" },
-                                                    { "id": "RAK", "text": "Marrakech Menara Airport" },
-                                                    { "id": "AGA", "text": "Agadir Al Massira Airport" }
-                                                ],
-                                                "minimumResultsForSearch": -1,
-                                                "placeholder": "Select Airport"
-                                            }'>
-                                                <option value="">Marrakech - Aéroport Menara</option>
+                                            <select id="arrival" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
+                                              <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                              <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
+                                              <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
                                             </select>
                                         </div>
                                         <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
@@ -393,7 +376,7 @@
                     <h2 class="font-grandis-bold text-[42px] mb-120 max-md:mb-70 text-center max-lg:text-[36px] max-sm:text-[30px]">Special Offers</h2>
                     <div class="grid grid-cols-2 gap-x-[51px] gap-y-[43px] max-[768px]:grid-cols-1">
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
-                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="/assets/img/image-1.png" alt="">
+                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
                                 <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
@@ -402,7 +385,7 @@
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
-                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="/assets/img/image-1.png" alt="">
+                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
                                 <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
@@ -411,7 +394,7 @@
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
-                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="/assets/img/image-1.png" alt="">
+                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
                                 <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
@@ -420,7 +403,7 @@
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
-                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="/assets/img/image-1.png" alt="">
+                            <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
                                 <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
@@ -479,7 +462,7 @@
             </section>
             <section class="pt-120 max-md:pt-70 pb-[88px] relative z-[20]">
                 
-                    <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="/assets/img/review-bg.jpg" alt="">
+                    <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/review-bg.jpg" alt="">
                     <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(0, 0, 0, 0.8)] to-[rgba(4, 1, 0, 0.7)] z-[0]"></div>
                     <div>
                         <div class="splide review-slide" data-splide='{
@@ -605,7 +588,7 @@
             <div class="container max-w-full">
                 <div class="flex justify-between text-white pb-[88px] border-b-[1px] border-gray-500 max-md:flex-wrap max-md:gap-y-[40px]">
                     <div class="[&>p]:font-grandis [&>p]:text-[11px] [&>p]:leading-[16.5px] [&>p]:text-[#D6D6D6] space-y-[24px] pr-[181px] max-lg:pr-[90px] max-md:w-full">
-                        <img src="/assets/img/svg/logo.svg" alt="" class="mb-[32px]">
+                        <img src="img/svg/logo.svg" alt="" class="mb-[32px]">
                         <p>123 Avenue des Palmiers, 40003 <br> Marrakech, Morocco</p>
                         <p>+212 705 050 166</p>
                         <p>ekscars@contact.com</p>
@@ -677,11 +660,7 @@
                 </div>
             </div>
         </footer>
-        <script  src="js/lib/jquery.js"></script>
-        <script src="js/lib/alpine.js"></script>
-        <script src="js/lib/select2.js"></script>
-        <script src="js/lib/splide.js"></script>
-        <script src="js/lib/flatpicker.js"></script>
-        <script type="module" src="js/main.js"></script>
+        
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>

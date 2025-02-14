@@ -6,6 +6,7 @@ module.exports = {
     './vehicles.html',
     './src/**/*.{js,ts,jsx,tsx,html}', // Adjust according to your project structure
   ],
+  
   theme: {
     extend: {
       
@@ -13,9 +14,7 @@ module.exports = {
         '120': '120px',
         '70': '70px',
       },
-      
-    },
-    fontFamily: {
+      fontFamily: {
         'grandis': ['Grandis-rg', 'sans-serif'],
         'grandis-lg': ['Grandis-lg', 'sans-serif'],
         'grandis-md': ['Grandis-md', 'sans-serif'],
@@ -53,7 +52,11 @@ module.exports = {
         white:'#fff',
         transparent: 'transparent',
       },
+    },
+    
   },
   plugins: [
+    require('tailwindcss-base-font-size')({
+    }),
   ],
 }

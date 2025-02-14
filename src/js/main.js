@@ -3,16 +3,16 @@
 import { select } from './components/select';
 import { flatPickr } from './components/calendar';
 import { splideJs } from './components/sliders';
-import { countryNum } from './components/country';
-import { dropdowns } from './components/dropdowns';
+import Alpine from 'alpinejs';
+ 
 
 document.addEventListener("DOMContentLoaded", function () {
     function init() {
-        select([".airport-select", ".filter-select", ".price"]);
-        flatPickr([".date-input", ".time-input"]);
+        select(".slim-select");
+        flatPickr(".flatpicker-item");
         splideJs();
-        countryNum();
-        dropdowns();
+        window.Alpine = Alpine;
+        Alpine.start();
     }
     init();
 });

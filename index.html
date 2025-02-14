@@ -7,10 +7,6 @@
         <title>Ekscars</title>
         
         <link rel="stylesheet" href="/src/css/main.css">
-        <script src="src/js/lib/alpine.js"></script>
-        <script src="src/js/lib/slimSelect.js"></script>
-        <script src="src/js/lib/splide.js"></script>
-        <script src="src/js/lib/flatpicker.js"></script>
     </head>
     <body class="font-grandis overflow-x-hidden" x-data="{ open: false, atTop: false }" :class="{ 'max-[1024px]:h-svh fixed overflow-hidden': open }">
 
@@ -22,77 +18,26 @@
                     </a>
                     <nav class="max-lg:fixed max-lg:inset-0 max-lg:bg-black max-lg:z-[999] max-lg:p-10  max-lg:w-full max-lg:h-svh" :class="{'max-lg:translate-x-0 ': open, 'max-lg:-translate-x-full': !open}" x-transition>
                         <ul class="flex space-x-[35px] max-lg:flex-col max-lg:space-y-[35px] max-lg:space-x-0">
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Home</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" target="_blank" href="/vehicles.html">Vehicles</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Services</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Promotions</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">News</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">My Budget</a></li>
-                            <div class="nav-right flex flex-col gap-y-[32px] lg:hidden [&>.price>.ss-arrow]:hidden">
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Home</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" target="_blank" href="/vehicles.html">Vehicles</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Services</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Promotions</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">News</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">My Budget</a></li>
+                            <div class="nav-right flex flex-col gap-y-8 lg:hidden [&>.slim-select>.ss-arrow]:hidden">
                               <select
                                   name="price-switch"
                                   id="price-v"
-                                  class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                                  class="slim-select w-max m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
                                   >
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="euro">EURO | €</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="dollar">DOLLAR | $</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="mad">MAD | DH</option>
                               </select>
             
-                                <div class="currency-switcher">
-                                    <div class="dropdown relative">
-                                        <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[5px] flex items-center text-white">
-                                            
-
-                                            <span>EN</span>
-                                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_45_1098)">
-                                                <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                                <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                                <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_45_1098">
-                                                <rect width="17" height="14" rx="1" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div class="list [&>.selected]:bg-[rgba(36,60,187,0.2)] [&>.selected]:pointer-events-none">
-                                        <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
-                                            
-
-                                            <span>EN</span>
-                                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_45_1098)">
-                                                <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                                <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                                <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_45_1098">
-                                                <rect width="17" height="14" rx="1" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
-                                            
-                                            <span>FR</span>
-                                            <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
-                                        </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
+                              <select name="lang" id="lang" class="slim-select w-max slim-select-lang m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none">
+                              
+                              </select>
                             </div>
                         </ul>
                         <div class="lg:hidden fixed top-[32px] max-[992px]:right-[40px] max-[640px]:right-[25px]" @click="open = false">
@@ -103,72 +48,24 @@
                         
                     </nav>
                     
-                    <div class="nav-right flex items-center gap-[32px] max-lg:hidden mb-[-5px] [&>.price>.ss-arrow]:hidden">
+                    <div class="nav-right flex items-center gap-8 max-lg:hidden mb-[-5px] [&>.slim-select>.ss-arrow]:hidden">
                         <select
                             name="price-switch"
                             id="price"
-                            class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                            class="slim-select w-max m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
                             >
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="euro">EURO | €</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="dollar">DOLLAR | $</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="mad">MAD | DH</option>
                         </select>
-
+                        <select
+                            name="lang-desk"
+                            id="lang-desk"
+                            class="slim-select w-max slim-select-lang m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                            >
+                            
+                        </select>
                         
-                        <div class="currency-switcher">
-                            <div class="dropdown relative">
-                                <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[6px] flex items-center text-white">
-                                    
-
-                                    <span>EN</span>
-                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_45_1098)">
-                                        <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                        <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                        <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_45_1098">
-                                        <rect width="17" height="14" rx="1" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="list">
-                                <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
-                                    
-
-                                    <span>EN</span>
-                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_45_1098)">
-                                        <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                        <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                        <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_45_1098">
-                                        <rect width="17" height="14" rx="1" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
-                                    
-                                    <span>FR</span>
-                                    <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
-                                </div>
-                                
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="lg:hidden" @click="open = true">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -184,149 +81,160 @@
         </header>
         
         <main>
-            <section id="hero" class="pt-[246px] pb-[78px] relative max-[480px]:pt-[180px] bg-cover bg-center bg-no-repeat transition-all duration-500">
-                <div class="bg-[linear-gradient(358.34deg,rgba(0,0,0,0.52)_1.3%,rgba(0,0,0,0.44)_42.68%,#040100_89.35%)] transform-gpu scale-y-[-1] absolute inset-0 z-0"></div>
-                <div class="container max-w-full relative z-20">
+            <section class="relative">
+                <div class="max-w-full relative z-20">
                     <h1 class="sr-only">EKSCARS</h1>
-                    <div class="splide hero-splide mb-120 max-md:mb-70" data-splide='{
-                        "type": "loop",
+                    <div class="splide hero-splide mb-120 max-md:mb-70 h-[1167px]" data-splide='{
+                        "type": "fade",
                         "autoplay": true,
                         "interval": 5000
                     }'>
-                        <div class="splide__track">
+                        <div class="splide__track h-full">
                             <div class="splide__list">
-                                <div class="splide__slide text-center" data-bg="img/hero-bg.jpg">
-                                    <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
-                                    <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
+                                <div class="splide__slide text-center h-[1167px] pt-[24.6rem] max-md:pt-[12rem]">
+                                    <div class="bg-[linear-gradient(358.34deg,rgba(0,0,0,0.52)_1.3%,rgba(0,0,0,0.44)_42.68%,#040100_89.35%)] transform-gpu scale-y-[-1] absolute inset-0 z-0 w-full h-full"></div>
+                                    <img class="absolute inset-0 object-cover z-[-1] w-full h-full" src="/public/img/hero-bg.jpg" alt="">
+                                    <div class="relative z-[20] px-[2.5rem]">
+                                      <h2 class="font-grandis-bold text-[4.2rem] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-4xl max-sm:text-3xl max-md:mb-12">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
+                                      <p class="text-white text-[1.9rem] leading-[2.7rem] max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
+                                    </div>
+                                    
                                 </div>
-                                <div class="splide__slide text-center" data-bg="img/hero-bg2.jpg">
-                                    <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
-                                    <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
+                                <div class="splide__slide text-center h-[1167px] pt-[24.6rem] max-md:pt-[12rem]">
+                                    <div class="bg-[linear-gradient(358.34deg,rgba(0,0,0,0.52)_1.3%,rgba(0,0,0,0.44)_42.68%,#040100_89.35%)] transform-gpu scale-y-[-1] absolute inset-0 z-0 w-full h-full"></div>
+                                    <img class="absolute inset-0 object-cover z-[-1] w-full h-full" src="/public/img/hero-bg2.jpg" alt="">
+                                    <div class="relative z-[20] px-[2.5rem]">
+                                      <h2 class="font-grandis-bold text-[4.2rem] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-4xl max-sm:text-3xl max-md:mb-12">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
+                                      <p class="text-white text-[1.9rem] leading-[2.7rem] max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
+                                    </div>
+                                    
+                                    
                                 </div>
-                                <div class="splide__slide text-center" data-bg="img/hero-bg3.png">
-                                    <h2 class="font-grandis-bold text-[42px] uppercase text-white max-w-[829px] mx-auto mb-10 max-lg:text-[36px] max-sm:text-[30px]">Ride in <span class="text-orange-500">style. Save</span>with ease.</h2>
-                                    <p class="text-white max-w-[676px] mx-auto">Indulge in superior comfort and performance. Make every journey unforgettable with our premium cars.</p>
-                                </div>
+                                
                             </div>
                         </div>
-                        <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev max-lg:left-[0] max-md:left-[-1em]">
+                        
+                        <div class="splide__arrows container max-w-full absolute top-[30rem] flex w-full justify-between max-md:top-[19.5rem]">
+                            <button class="splide__arrow splide__arrow--prev rotate-180 w-[3.8rem] h-[3.8rem] rounded-full bg-[#D9D9D9] bg-opacity-40 flex items-center justify-center hover:bg-opacity-100 disabled:bg-opacity-40">
                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
                                 </svg>
                             </button>
-                            <button class="splide__arrow splide__arrow--next max-lg:right-[0] max-md:right-[-1em]">
+                            <button class="splide__arrow splide__arrow--next w-[3.8rem] h-[3.8rem] rounded-full bg-[#D9D9D9] bg-opacity-40 flex items-center justify-center hover:bg-opacity-100 disabled:bg-opacity-40">
                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
                                 </svg>
                                     
                             </button>
+                        
                         </div>
+                        
+                        <div class="max-w-[825px] mx-auto w-full absolute bottom-[7.8rem] left-1/2 transform -translate-x-1/2 px-[2.5rem] max-md:bottom-[5rem]">
+                          <div class="bg-gray-500 bg-opacity-45 rounded-xl px-[47px] pb-[42px] pt-[37px] max-md:px-[20px]">
+                              <h3 class="relative text-white uppercase font-grandis-bold text-xl leading-[25.6px] mb-[35px] pb-[11px] after:absolute after:content-[''] after:w-[102px] after:bg-orange-500 after:h-[2px] after:bottom-0 after:left-0">Find your car now</h3>
+                              <form action="" class="mb-[46px] max-[480px]:mb-[30px]">
+                                  <div class="grid grid-cols-2 gap-5 mb-[30px] max-md:grid-cols-1">
+                                      <div>
+                                          <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Pick-up</span>
+                                          <div class="relative mb-[22px]">
+                                              <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
+                                              </svg>
+                                                  
+                                              <select id="departure" class="slim-select rounded-md font-grandis text-[1.3rem] pl-[36px] h-[50px] text-gray-500">
+                                                <option class="px-[1rem]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                                <option class="px-[1rem]" value="RAK">Marrakech Menara Airport</option>
+                                                <option class="px-[1rem]" value="AGA">Agadir Al Massira Airport</option>
+                                              </select>
+                                          </div>
+  
+                                          <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
+                                              <span class="mr-[14px]">
+                                                  <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3125 2.92726C2.57483 3.01473 2.03374 3.18361 1.58493 3.50969C1.28426 3.72814 1.01985 3.99255 0.801398 4.29322C0.125 5.2242 0.125 6.55223 0.125 9.20829C0.125 11.8644 0.125 13.1924 0.801398 14.1234C1.01985 14.424 1.28426 14.6884 1.58493 14.9069C2.51591 15.5833 3.84394 15.5833 6.5 15.5833C7.09425 15.5833 7.62203 15.5833 8.09375 15.5757L8.09375 15.526C8.0937 14.9225 8.09367 14.5549 8.14389 14.2378C8.41992 12.495 9.78675 11.1282 11.5295 10.8522C11.8466 10.802 12.2142 10.802 12.8178 10.802L12.8674 10.802C12.875 10.3304 12.875 9.80274 12.875 9.20862C12.875 6.55256 12.875 5.2242 12.1986 4.29322C11.9802 3.99255 11.7157 3.72814 11.4151 3.50969C10.9663 3.18361 10.4252 3.01473 9.6875 2.92726V3.54163C9.6875 4.12843 9.2118 4.60413 8.625 4.60413C8.0382 4.60413 7.5625 4.12843 7.5625 3.54163V2.83528C7.23376 2.83329 6.88051 2.83329 6.5 2.83329C6.11949 2.83329 5.76624 2.83329 5.4375 2.83528V3.54163C5.4375 4.12843 4.9618 4.60413 4.375 4.60413C3.7882 4.60413 3.3125 4.12843 3.3125 3.54163V2.92726ZM2.95833 7.08329C3.34953 7.08329 3.66667 6.76616 3.66667 6.37496C3.66667 5.98376 3.34953 5.66663 2.95833 5.66663C2.56713 5.66663 2.25 5.98376 2.25 6.37496C2.25 6.76616 2.56713 7.08329 2.95833 7.08329ZM3.66667 9.20829C3.66667 9.59949 3.34953 9.91663 2.95833 9.91663C2.56713 9.91663 2.25 9.59949 2.25 9.20829C2.25 8.81709 2.56713 8.49996 2.95833 8.49996C3.34953 8.49996 3.66667 8.81709 3.66667 9.20829ZM6.5 7.08329C6.8912 7.08329 7.20833 6.76616 7.20833 6.37496C7.20833 5.98376 6.8912 5.66663 6.5 5.66663C6.1088 5.66663 5.79167 5.98376 5.79167 6.37496C5.79167 6.76616 6.1088 7.08329 6.5 7.08329ZM7.20833 9.20829C7.20833 9.59949 6.8912 9.91663 6.5 9.91663C6.1088 9.91663 5.79167 9.59949 5.79167 9.20829C5.79167 8.81709 6.1088 8.49996 6.5 8.49996C6.8912 8.49996 7.20833 8.81709 7.20833 9.20829ZM6.5 12.75C6.8912 12.75 7.20833 12.4328 7.20833 12.0416C7.20833 11.6504 6.8912 11.3333 6.5 11.3333C6.1088 11.3333 5.79167 11.6504 5.79167 12.0416C5.79167 12.4328 6.1088 12.75 6.5 12.75ZM10.75 6.37496C10.75 6.76616 10.4329 7.08329 10.0417 7.08329C9.65046 7.08329 9.33333 6.76616 9.33333 6.37496C9.33333 5.98376 9.65046 5.66663 10.0417 5.66663C10.4329 5.66663 10.75 5.98376 10.75 6.37496ZM10.0417 9.91663C10.4329 9.91663 10.75 9.59949 10.75 9.20829C10.75 8.81709 10.4329 8.49996 10.0417 8.49996C9.65046 8.49996 9.33333 8.81709 9.33333 9.20829C9.33333 9.59949 9.65046 9.91663 10.0417 9.91663ZM3.66667 12.0416C3.66667 12.4328 3.34953 12.75 2.95833 12.75C2.56713 12.75 2.25 12.4328 2.25 12.0416C2.25 11.6504 2.56713 11.3333 2.95833 11.3333C3.34953 11.3333 3.66667 11.6504 3.66667 12.0416Z" fill="#FF5F01"/>
+                                                  <path d="M12.8287 11.8645C12.1839 11.8646 11.9142 11.867 11.6957 11.9016C10.4076 12.1056 9.39733 13.1159 9.19331 14.404C9.15872 14.6225 9.15634 14.8922 9.15625 15.537C10.176 15.4701 10.8649 15.3066 11.4151 14.9069C11.7157 14.6884 11.9802 14.424 12.1986 14.1234C12.5983 13.5732 12.7619 12.8843 12.8287 11.8645Z" fill="#FF5F01"/>
+                                                  <path d="M4.90625 1.41663C4.90625 1.12322 4.6684 0.885376 4.375 0.885376C4.0816 0.885376 3.84375 1.12322 3.84375 1.41663V3.54163C3.84375 3.83503 4.0816 4.07288 4.375 4.07288C4.6684 4.07288 4.90625 3.83503 4.90625 3.54163V1.41663Z" fill="#FF5F01"/>
+                                                  <path d="M9.15625 1.41663C9.15625 1.12322 8.9184 0.885376 8.625 0.885376C8.3316 0.885376 8.09375 1.12322 8.09375 1.41663V3.54163C8.09375 3.83503 8.3316 4.07288 8.625 4.07288C8.9184 4.07288 9.15625 3.83503 9.15625 3.54163V1.41663Z" fill="#FF5F01"/>
+                                                  </svg>
+                                              </span>
+                                              <div class="flex items-center relative max-md:flex-[100%]">
+                                                  <input type="text" class="text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] flatpicker-item w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
+                                                  <svg class="absolute right-5 max-md:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
+                                                  </svg>
+                                                  
+                                              </div>
+                                              
+                                              <span class="block w-[0.75px] h-full bg-gray-500"></span>
+                                              <div class="flex items-center relative">
+                                                  <input type="text" class="flatpicker-item text-gray-500 font-grandis text-[1.3rem] pl-5 leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer max-md:pl-[1rem]" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
+                                                  <svg class="absolute right-5 max-[480px]:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
+                                                  </svg>
+                                              </div>
+                                              
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Drop-off</span>
+                                          <div class="relative mb-[22px]">
+                                              <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
+                                              </svg>
+                                              <select id="arrival" class="slim-select rounded-md font-grandis text-[1.3rem] pl-[36px] h-[50px] text-gray-500">
+                                                <option class="px-[1rem]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                                <option class="px-[1rem]" value="RAK">Marrakech Menara Airport</option>
+                                                <option class="px-[1rem]" value="AGA">Agadir Al Massira Airport</option>
+                                              </select>
+                                          </div>
+                                          <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
+                                              <span class="mr-[14px]">
+                                                  <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3125 2.92726C2.57483 3.01473 2.03374 3.18361 1.58493 3.50969C1.28426 3.72814 1.01985 3.99255 0.801398 4.29322C0.125 5.2242 0.125 6.55223 0.125 9.20829C0.125 11.8644 0.125 13.1924 0.801398 14.1234C1.01985 14.424 1.28426 14.6884 1.58493 14.9069C2.51591 15.5833 3.84394 15.5833 6.5 15.5833C7.09425 15.5833 7.62203 15.5833 8.09375 15.5757L8.09375 15.526C8.0937 14.9225 8.09367 14.5549 8.14389 14.2378C8.41992 12.495 9.78675 11.1282 11.5295 10.8522C11.8466 10.802 12.2142 10.802 12.8178 10.802L12.8674 10.802C12.875 10.3304 12.875 9.80274 12.875 9.20862C12.875 6.55256 12.875 5.2242 12.1986 4.29322C11.9802 3.99255 11.7157 3.72814 11.4151 3.50969C10.9663 3.18361 10.4252 3.01473 9.6875 2.92726V3.54163C9.6875 4.12843 9.2118 4.60413 8.625 4.60413C8.0382 4.60413 7.5625 4.12843 7.5625 3.54163V2.83528C7.23376 2.83329 6.88051 2.83329 6.5 2.83329C6.11949 2.83329 5.76624 2.83329 5.4375 2.83528V3.54163C5.4375 4.12843 4.9618 4.60413 4.375 4.60413C3.7882 4.60413 3.3125 4.12843 3.3125 3.54163V2.92726ZM2.95833 7.08329C3.34953 7.08329 3.66667 6.76616 3.66667 6.37496C3.66667 5.98376 3.34953 5.66663 2.95833 5.66663C2.56713 5.66663 2.25 5.98376 2.25 6.37496C2.25 6.76616 2.56713 7.08329 2.95833 7.08329ZM3.66667 9.20829C3.66667 9.59949 3.34953 9.91663 2.95833 9.91663C2.56713 9.91663 2.25 9.59949 2.25 9.20829C2.25 8.81709 2.56713 8.49996 2.95833 8.49996C3.34953 8.49996 3.66667 8.81709 3.66667 9.20829ZM6.5 7.08329C6.8912 7.08329 7.20833 6.76616 7.20833 6.37496C7.20833 5.98376 6.8912 5.66663 6.5 5.66663C6.1088 5.66663 5.79167 5.98376 5.79167 6.37496C5.79167 6.76616 6.1088 7.08329 6.5 7.08329ZM7.20833 9.20829C7.20833 9.59949 6.8912 9.91663 6.5 9.91663C6.1088 9.91663 5.79167 9.59949 5.79167 9.20829C5.79167 8.81709 6.1088 8.49996 6.5 8.49996C6.8912 8.49996 7.20833 8.81709 7.20833 9.20829ZM6.5 12.75C6.8912 12.75 7.20833 12.4328 7.20833 12.0416C7.20833 11.6504 6.8912 11.3333 6.5 11.3333C6.1088 11.3333 5.79167 11.6504 5.79167 12.0416C5.79167 12.4328 6.1088 12.75 6.5 12.75ZM10.75 6.37496C10.75 6.76616 10.4329 7.08329 10.0417 7.08329C9.65046 7.08329 9.33333 6.76616 9.33333 6.37496C9.33333 5.98376 9.65046 5.66663 10.0417 5.66663C10.4329 5.66663 10.75 5.98376 10.75 6.37496ZM10.0417 9.91663C10.4329 9.91663 10.75 9.59949 10.75 9.20829C10.75 8.81709 10.4329 8.49996 10.0417 8.49996C9.65046 8.49996 9.33333 8.81709 9.33333 9.20829C9.33333 9.59949 9.65046 9.91663 10.0417 9.91663ZM3.66667 12.0416C3.66667 12.4328 3.34953 12.75 2.95833 12.75C2.56713 12.75 2.25 12.4328 2.25 12.0416C2.25 11.6504 2.56713 11.3333 2.95833 11.3333C3.34953 11.3333 3.66667 11.6504 3.66667 12.0416Z" fill="#FF5F01"/>
+                                                  <path d="M12.8287 11.8645C12.1839 11.8646 11.9142 11.867 11.6957 11.9016C10.4076 12.1056 9.39733 13.1159 9.19331 14.404C9.15872 14.6225 9.15634 14.8922 9.15625 15.537C10.176 15.4701 10.8649 15.3066 11.4151 14.9069C11.7157 14.6884 11.9802 14.424 12.1986 14.1234C12.5983 13.5732 12.7619 12.8843 12.8287 11.8645Z" fill="#FF5F01"/>
+                                                  <path d="M4.90625 1.41663C4.90625 1.12322 4.6684 0.885376 4.375 0.885376C4.0816 0.885376 3.84375 1.12322 3.84375 1.41663V3.54163C3.84375 3.83503 4.0816 4.07288 4.375 4.07288C4.6684 4.07288 4.90625 3.83503 4.90625 3.54163V1.41663Z" fill="#FF5F01"/>
+                                                  <path d="M9.15625 1.41663C9.15625 1.12322 8.9184 0.885376 8.625 0.885376C8.3316 0.885376 8.09375 1.12322 8.09375 1.41663V3.54163C8.09375 3.83503 8.3316 4.07288 8.625 4.07288C8.9184 4.07288 9.15625 3.83503 9.15625 3.54163V1.41663Z" fill="#FF5F01"/>
+                                                  </svg>
+                                              </span>
+                                              <div class="flex items-center relative max-md:flex-[100%]">
+                                                  <input type="text" class="text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] flatpicker-item w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
+                                                  <svg class="absolute right-5 max-md:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
+                                                  </svg>
+                                                  
+                                              </div>
+                                              
+                                              <span class="block w-[0.75px] h-full bg-gray-500"></span>
+                                              <div class="flex items-center relative pl-5 max-md:pl-[1rem] ">
+                                                  <input type="text" class="flatpicker-item text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
+                                                  <svg class="absolute right-5 max-[480px]:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
+                                                  </svg>
+                                              </div>
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <button class="font-grandis-md text-[1.7rem] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[1.5rem] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Search</button>
+                              </form>
+                              <span class="font-grandis text-white text-xl leading-[25.6px] block mb-[5rem] text-center max-[480px]:mb-[30px]">Or</span>
+                              <a href="http://" class="flex items-center text-[1.8rem] max-sm:text-[1.6rem] text-white mx-auto bg-gray-500 bg-opacity-45 p-4 rounded-[1rem] flex w-max hover:bg-[#25D366] transition duration-200 ease">
+                                  <svg class="mr-[1rem]" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M21.2516 3.63446C20.1056 2.47742 18.7408 1.56016 17.2366 0.93617C15.7324 0.312183 14.1191 -0.00603253 12.4906 8.66016e-05C5.66719 8.66016e-05 0.10625 5.55946 0.1 12.3845C0.1 14.5704 0.671875 16.697 1.75156 18.5798L0 25.0001L6.56875 23.2782C8.38513 24.2692 10.4215 24.7877 12.4906 24.786H12.4969C19.3219 24.786 24.8813 19.2267 24.8875 12.3954C24.8889 10.7674 24.5682 9.15514 23.9439 7.65156C23.3197 6.14798 22.4057 4.78274 21.2516 3.63446ZM12.4906 22.6891C10.6456 22.6877 8.83473 22.1913 7.24687 21.2516L6.87187 21.0266L2.975 22.0485L4.01562 18.247L3.77188 17.8548C2.74032 16.2147 2.19476 14.3158 2.19844 12.3782C2.19844 6.71259 6.81875 2.09071 12.4969 2.09071C13.8496 2.08828 15.1894 2.35364 16.4391 2.87148C17.6888 3.38932 18.8236 4.1494 19.7781 5.1079C20.7358 6.06282 21.495 7.19781 22.012 8.44747C22.529 9.69713 22.7937 11.0368 22.7906 12.3891C22.7844 18.0751 18.1641 22.6891 12.4906 22.6891ZM18.1391 14.9798C17.8313 14.8251 16.3109 14.0766 16.025 13.9704C15.7406 13.8688 15.5328 13.8157 15.3297 14.1251C15.1219 14.4329 14.5281 15.1345 14.35 15.336C14.1719 15.5438 13.9875 15.5673 13.6781 15.4141C13.3703 15.2579 12.3719 14.9329 11.1906 13.8751C10.2688 13.0548 9.65156 12.0391 9.46719 11.7313C9.28906 11.422 9.45 11.2563 9.60469 11.1016C9.74062 10.9641 9.9125 10.7391 10.0672 10.561C10.2234 10.3829 10.275 10.2516 10.3766 10.0454C10.4781 9.83602 10.4297 9.6579 10.3531 9.50321C10.275 9.34852 9.65781 7.82196 9.39688 7.20634C9.14688 6.59852 8.89219 6.6829 8.70156 6.67509C8.52344 6.66415 8.31563 6.66415 8.10781 6.66415C7.9509 6.66814 7.7965 6.70448 7.65427 6.77089C7.51204 6.8373 7.38505 6.93235 7.28125 7.05009C6.99687 7.35946 6.20156 8.1079 6.20156 9.63446C6.20156 11.161 7.31094 12.6282 7.46719 12.836C7.62031 13.0438 9.64531 16.1673 12.7531 17.511C13.4875 17.8313 14.0656 18.0204 14.5172 18.1641C15.2594 18.4016 15.9297 18.3657 16.4641 18.2891C17.0578 18.1985 18.2938 17.5391 18.5547 16.8157C18.8109 16.0907 18.8109 15.472 18.7328 15.3423C18.6562 15.211 18.4484 15.1345 18.1391 14.9798Z" fill="white"/>
+                                  </svg>
+                                  
+                                  Available Via Whatsapp
+                              </a>
+                          </div>
+                      </div>
                     </div>
-                    <div class="max-w-[775px] mx-auto">
-                        <div class="bg-gray-500 bg-opacity-45 rounded-xl px-[47px] pb-[42px] pt-[37px] max-md:px-[20px]">
-                            <h3 class="relative text-white uppercase font-grandis-bold text-[20px] leading-[25.6px] mb-[35px] pb-[11px] after:absolute after:content-[''] after:w-[102px] after:bg-orange-500 after:h-[2px] after:bottom-0 after:left-0">Find your car now</h3>
-                            <form action="" class="mb-[46px] max-[480px]:mb-[30px]">
-                                <div class="grid grid-cols-2 gap-5 mb-[30px] max-md:grid-cols-1">
-                                    <div>
-                                        <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Pick-up</span>
-                                        <div class="relative mb-[22px]">
-                                            <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
-                                            </svg>
-                                                
-                                            <select id="departure" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
-                                              <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
-                                              <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
-                                              <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
-                                            <span class="mr-[14px]">
-                                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3125 2.92726C2.57483 3.01473 2.03374 3.18361 1.58493 3.50969C1.28426 3.72814 1.01985 3.99255 0.801398 4.29322C0.125 5.2242 0.125 6.55223 0.125 9.20829C0.125 11.8644 0.125 13.1924 0.801398 14.1234C1.01985 14.424 1.28426 14.6884 1.58493 14.9069C2.51591 15.5833 3.84394 15.5833 6.5 15.5833C7.09425 15.5833 7.62203 15.5833 8.09375 15.5757L8.09375 15.526C8.0937 14.9225 8.09367 14.5549 8.14389 14.2378C8.41992 12.495 9.78675 11.1282 11.5295 10.8522C11.8466 10.802 12.2142 10.802 12.8178 10.802L12.8674 10.802C12.875 10.3304 12.875 9.80274 12.875 9.20862C12.875 6.55256 12.875 5.2242 12.1986 4.29322C11.9802 3.99255 11.7157 3.72814 11.4151 3.50969C10.9663 3.18361 10.4252 3.01473 9.6875 2.92726V3.54163C9.6875 4.12843 9.2118 4.60413 8.625 4.60413C8.0382 4.60413 7.5625 4.12843 7.5625 3.54163V2.83528C7.23376 2.83329 6.88051 2.83329 6.5 2.83329C6.11949 2.83329 5.76624 2.83329 5.4375 2.83528V3.54163C5.4375 4.12843 4.9618 4.60413 4.375 4.60413C3.7882 4.60413 3.3125 4.12843 3.3125 3.54163V2.92726ZM2.95833 7.08329C3.34953 7.08329 3.66667 6.76616 3.66667 6.37496C3.66667 5.98376 3.34953 5.66663 2.95833 5.66663C2.56713 5.66663 2.25 5.98376 2.25 6.37496C2.25 6.76616 2.56713 7.08329 2.95833 7.08329ZM3.66667 9.20829C3.66667 9.59949 3.34953 9.91663 2.95833 9.91663C2.56713 9.91663 2.25 9.59949 2.25 9.20829C2.25 8.81709 2.56713 8.49996 2.95833 8.49996C3.34953 8.49996 3.66667 8.81709 3.66667 9.20829ZM6.5 7.08329C6.8912 7.08329 7.20833 6.76616 7.20833 6.37496C7.20833 5.98376 6.8912 5.66663 6.5 5.66663C6.1088 5.66663 5.79167 5.98376 5.79167 6.37496C5.79167 6.76616 6.1088 7.08329 6.5 7.08329ZM7.20833 9.20829C7.20833 9.59949 6.8912 9.91663 6.5 9.91663C6.1088 9.91663 5.79167 9.59949 5.79167 9.20829C5.79167 8.81709 6.1088 8.49996 6.5 8.49996C6.8912 8.49996 7.20833 8.81709 7.20833 9.20829ZM6.5 12.75C6.8912 12.75 7.20833 12.4328 7.20833 12.0416C7.20833 11.6504 6.8912 11.3333 6.5 11.3333C6.1088 11.3333 5.79167 11.6504 5.79167 12.0416C5.79167 12.4328 6.1088 12.75 6.5 12.75ZM10.75 6.37496C10.75 6.76616 10.4329 7.08329 10.0417 7.08329C9.65046 7.08329 9.33333 6.76616 9.33333 6.37496C9.33333 5.98376 9.65046 5.66663 10.0417 5.66663C10.4329 5.66663 10.75 5.98376 10.75 6.37496ZM10.0417 9.91663C10.4329 9.91663 10.75 9.59949 10.75 9.20829C10.75 8.81709 10.4329 8.49996 10.0417 8.49996C9.65046 8.49996 9.33333 8.81709 9.33333 9.20829C9.33333 9.59949 9.65046 9.91663 10.0417 9.91663ZM3.66667 12.0416C3.66667 12.4328 3.34953 12.75 2.95833 12.75C2.56713 12.75 2.25 12.4328 2.25 12.0416C2.25 11.6504 2.56713 11.3333 2.95833 11.3333C3.34953 11.3333 3.66667 11.6504 3.66667 12.0416Z" fill="#FF5F01"/>
-                                                <path d="M12.8287 11.8645C12.1839 11.8646 11.9142 11.867 11.6957 11.9016C10.4076 12.1056 9.39733 13.1159 9.19331 14.404C9.15872 14.6225 9.15634 14.8922 9.15625 15.537C10.176 15.4701 10.8649 15.3066 11.4151 14.9069C11.7157 14.6884 11.9802 14.424 12.1986 14.1234C12.5983 13.5732 12.7619 12.8843 12.8287 11.8645Z" fill="#FF5F01"/>
-                                                <path d="M4.90625 1.41663C4.90625 1.12322 4.6684 0.885376 4.375 0.885376C4.0816 0.885376 3.84375 1.12322 3.84375 1.41663V3.54163C3.84375 3.83503 4.0816 4.07288 4.375 4.07288C4.6684 4.07288 4.90625 3.83503 4.90625 3.54163V1.41663Z" fill="#FF5F01"/>
-                                                <path d="M9.15625 1.41663C9.15625 1.12322 8.9184 0.885376 8.625 0.885376C8.3316 0.885376 8.09375 1.12322 8.09375 1.41663V3.54163C8.09375 3.83503 8.3316 4.07288 8.625 4.07288C8.9184 4.07288 9.15625 3.83503 9.15625 3.54163V1.41663Z" fill="#FF5F01"/>
-                                                </svg>
-                                            </span>
-                                            <div class="flex items-center relative max-md:flex-[100%]">
-                                                <input type="text" class="text-gray-500 font-grandis text-[13px] leading-[16.64px] date-input w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
-                                                <svg class="absolute right-5 max-md:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
-                                                </svg>
-                                                
-                                            </div>
-                                            
-                                            <span class="block w-[0.75px] h-full bg-gray-500"></span>
-                                            <div class="flex items-center relative">
-                                                <input type="text" class="time-input text-gray-500 font-grandis text-[13px] pl-5 leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer max-md:pl-[10px]" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
-                                                <svg class="absolute right-5 max-[480px]:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
-                                                </svg>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-white text-sm font-grandis-bold leading-[17.92px] mb-[11px] block">Drop-off</span>
-                                        <div class="relative mb-[22px]">
-                                            <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
-                                            </svg>
-                                            <select id="arrival" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
-                                              <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
-                                              <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
-                                              <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
-                                            </select>
-                                        </div>
-                                        <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
-                                            <span class="mr-[14px]">
-                                                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.3125 2.92726C2.57483 3.01473 2.03374 3.18361 1.58493 3.50969C1.28426 3.72814 1.01985 3.99255 0.801398 4.29322C0.125 5.2242 0.125 6.55223 0.125 9.20829C0.125 11.8644 0.125 13.1924 0.801398 14.1234C1.01985 14.424 1.28426 14.6884 1.58493 14.9069C2.51591 15.5833 3.84394 15.5833 6.5 15.5833C7.09425 15.5833 7.62203 15.5833 8.09375 15.5757L8.09375 15.526C8.0937 14.9225 8.09367 14.5549 8.14389 14.2378C8.41992 12.495 9.78675 11.1282 11.5295 10.8522C11.8466 10.802 12.2142 10.802 12.8178 10.802L12.8674 10.802C12.875 10.3304 12.875 9.80274 12.875 9.20862C12.875 6.55256 12.875 5.2242 12.1986 4.29322C11.9802 3.99255 11.7157 3.72814 11.4151 3.50969C10.9663 3.18361 10.4252 3.01473 9.6875 2.92726V3.54163C9.6875 4.12843 9.2118 4.60413 8.625 4.60413C8.0382 4.60413 7.5625 4.12843 7.5625 3.54163V2.83528C7.23376 2.83329 6.88051 2.83329 6.5 2.83329C6.11949 2.83329 5.76624 2.83329 5.4375 2.83528V3.54163C5.4375 4.12843 4.9618 4.60413 4.375 4.60413C3.7882 4.60413 3.3125 4.12843 3.3125 3.54163V2.92726ZM2.95833 7.08329C3.34953 7.08329 3.66667 6.76616 3.66667 6.37496C3.66667 5.98376 3.34953 5.66663 2.95833 5.66663C2.56713 5.66663 2.25 5.98376 2.25 6.37496C2.25 6.76616 2.56713 7.08329 2.95833 7.08329ZM3.66667 9.20829C3.66667 9.59949 3.34953 9.91663 2.95833 9.91663C2.56713 9.91663 2.25 9.59949 2.25 9.20829C2.25 8.81709 2.56713 8.49996 2.95833 8.49996C3.34953 8.49996 3.66667 8.81709 3.66667 9.20829ZM6.5 7.08329C6.8912 7.08329 7.20833 6.76616 7.20833 6.37496C7.20833 5.98376 6.8912 5.66663 6.5 5.66663C6.1088 5.66663 5.79167 5.98376 5.79167 6.37496C5.79167 6.76616 6.1088 7.08329 6.5 7.08329ZM7.20833 9.20829C7.20833 9.59949 6.8912 9.91663 6.5 9.91663C6.1088 9.91663 5.79167 9.59949 5.79167 9.20829C5.79167 8.81709 6.1088 8.49996 6.5 8.49996C6.8912 8.49996 7.20833 8.81709 7.20833 9.20829ZM6.5 12.75C6.8912 12.75 7.20833 12.4328 7.20833 12.0416C7.20833 11.6504 6.8912 11.3333 6.5 11.3333C6.1088 11.3333 5.79167 11.6504 5.79167 12.0416C5.79167 12.4328 6.1088 12.75 6.5 12.75ZM10.75 6.37496C10.75 6.76616 10.4329 7.08329 10.0417 7.08329C9.65046 7.08329 9.33333 6.76616 9.33333 6.37496C9.33333 5.98376 9.65046 5.66663 10.0417 5.66663C10.4329 5.66663 10.75 5.98376 10.75 6.37496ZM10.0417 9.91663C10.4329 9.91663 10.75 9.59949 10.75 9.20829C10.75 8.81709 10.4329 8.49996 10.0417 8.49996C9.65046 8.49996 9.33333 8.81709 9.33333 9.20829C9.33333 9.59949 9.65046 9.91663 10.0417 9.91663ZM3.66667 12.0416C3.66667 12.4328 3.34953 12.75 2.95833 12.75C2.56713 12.75 2.25 12.4328 2.25 12.0416C2.25 11.6504 2.56713 11.3333 2.95833 11.3333C3.34953 11.3333 3.66667 11.6504 3.66667 12.0416Z" fill="#FF5F01"/>
-                                                <path d="M12.8287 11.8645C12.1839 11.8646 11.9142 11.867 11.6957 11.9016C10.4076 12.1056 9.39733 13.1159 9.19331 14.404C9.15872 14.6225 9.15634 14.8922 9.15625 15.537C10.176 15.4701 10.8649 15.3066 11.4151 14.9069C11.7157 14.6884 11.9802 14.424 12.1986 14.1234C12.5983 13.5732 12.7619 12.8843 12.8287 11.8645Z" fill="#FF5F01"/>
-                                                <path d="M4.90625 1.41663C4.90625 1.12322 4.6684 0.885376 4.375 0.885376C4.0816 0.885376 3.84375 1.12322 3.84375 1.41663V3.54163C3.84375 3.83503 4.0816 4.07288 4.375 4.07288C4.6684 4.07288 4.90625 3.83503 4.90625 3.54163V1.41663Z" fill="#FF5F01"/>
-                                                <path d="M9.15625 1.41663C9.15625 1.12322 8.9184 0.885376 8.625 0.885376C8.3316 0.885376 8.09375 1.12322 8.09375 1.41663V3.54163C8.09375 3.83503 8.3316 4.07288 8.625 4.07288C8.9184 4.07288 9.15625 3.83503 9.15625 3.54163V1.41663Z" fill="#FF5F01"/>
-                                                </svg>
-                                            </span>
-                                            <div class="flex items-center relative max-md:flex-[100%]">
-                                                <input type="text" class="text-gray-500 font-grandis text-[13px] leading-[16.64px] date-input w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
-                                                <svg class="absolute right-5 max-md:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
-                                                </svg>
-                                                
-                                            </div>
-                                            
-                                            <span class="block w-[0.75px] h-full bg-gray-500"></span>
-                                            <div class="flex items-center relative pl-5 max-md:pl-[10px] ">
-                                                <input type="text" class="time-input text-gray-500 font-grandis text-[13px] leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
-                                                <svg class="absolute right-5 max-[480px]:right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
-                                                </svg>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="font-grandis-md text-[17px] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[15px] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Search</button>
-                            </form>
-                            <span class="font-grandis text-white text-xl leading-[25.6px] block mb-[50px] text-center max-[480px]:mb-[30px]">Or</span>
-                            <a href="http://" class="text-white mx-auto bg-gray-500 bg-opacity-45 p-4 rounded-[10px] flex w-max hover:bg-[#25D366] transition duration-200 ease">
-                                <svg class="mr-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.2516 3.63446C20.1056 2.47742 18.7408 1.56016 17.2366 0.93617C15.7324 0.312183 14.1191 -0.00603253 12.4906 8.66016e-05C5.66719 8.66016e-05 0.10625 5.55946 0.1 12.3845C0.1 14.5704 0.671875 16.697 1.75156 18.5798L0 25.0001L6.56875 23.2782C8.38513 24.2692 10.4215 24.7877 12.4906 24.786H12.4969C19.3219 24.786 24.8813 19.2267 24.8875 12.3954C24.8889 10.7674 24.5682 9.15514 23.9439 7.65156C23.3197 6.14798 22.4057 4.78274 21.2516 3.63446ZM12.4906 22.6891C10.6456 22.6877 8.83473 22.1913 7.24687 21.2516L6.87187 21.0266L2.975 22.0485L4.01562 18.247L3.77188 17.8548C2.74032 16.2147 2.19476 14.3158 2.19844 12.3782C2.19844 6.71259 6.81875 2.09071 12.4969 2.09071C13.8496 2.08828 15.1894 2.35364 16.4391 2.87148C17.6888 3.38932 18.8236 4.1494 19.7781 5.1079C20.7358 6.06282 21.495 7.19781 22.012 8.44747C22.529 9.69713 22.7937 11.0368 22.7906 12.3891C22.7844 18.0751 18.1641 22.6891 12.4906 22.6891ZM18.1391 14.9798C17.8313 14.8251 16.3109 14.0766 16.025 13.9704C15.7406 13.8688 15.5328 13.8157 15.3297 14.1251C15.1219 14.4329 14.5281 15.1345 14.35 15.336C14.1719 15.5438 13.9875 15.5673 13.6781 15.4141C13.3703 15.2579 12.3719 14.9329 11.1906 13.8751C10.2688 13.0548 9.65156 12.0391 9.46719 11.7313C9.28906 11.422 9.45 11.2563 9.60469 11.1016C9.74062 10.9641 9.9125 10.7391 10.0672 10.561C10.2234 10.3829 10.275 10.2516 10.3766 10.0454C10.4781 9.83602 10.4297 9.6579 10.3531 9.50321C10.275 9.34852 9.65781 7.82196 9.39688 7.20634C9.14688 6.59852 8.89219 6.6829 8.70156 6.67509C8.52344 6.66415 8.31563 6.66415 8.10781 6.66415C7.9509 6.66814 7.7965 6.70448 7.65427 6.77089C7.51204 6.8373 7.38505 6.93235 7.28125 7.05009C6.99687 7.35946 6.20156 8.1079 6.20156 9.63446C6.20156 11.161 7.31094 12.6282 7.46719 12.836C7.62031 13.0438 9.64531 16.1673 12.7531 17.511C13.4875 17.8313 14.0656 18.0204 14.5172 18.1641C15.2594 18.4016 15.9297 18.3657 16.4641 18.2891C17.0578 18.1985 18.2938 17.5391 18.5547 16.8157C18.8109 16.0907 18.8109 15.472 18.7328 15.3423C18.6562 15.211 18.4484 15.1345 18.1391 14.9798Z" fill="white"/>
-                                </svg>
-                                
-                                Available Via Whatsapp
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
             <section class="mt-120 mb-[116px] max-md:my-70">
                 <div class="container max-w-full">
-                    <h2 class="font-grandis-bold text-[42px] pb-120 max-md:pb-70 text-center max-lg:text-[36px] max-sm:text-[30px]">Why Chose Us?</h2>
-                    <div class="grid grid-cols-4 items-start gap-[65px] max-md:grid-cols-2 max-md:gap-[32px] max-xs:grid-cols-1">
+                    <h2 class="font-grandis-bold text-[4.2rem] pb-120 max-md:pb-70 text-center max-lg:text-4xl max-sm:text-3xl">Why Chose Us?</h2>
+                    <div class="grid grid-cols-4 items-start gap-[65px] max-md:grid-cols-2 max-md:gap-8 max-xs:grid-cols-1">
                         <div class="flex flex-col items-center justify-center text-center ">
                             <div class="flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-md:mb-[30px]">
                                 <svg class="w-[60px] h-[60px]" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -334,8 +242,8 @@
                                 </svg>
                                     
                             </div>
-                            <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Availability</h3>
-                            <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Available in Agadir, Marrakech and Casablanca.</p>
+                            <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Availability</h3>
+                            <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Available in Agadir, Marrakech and Casablanca.</p>
                         </div>
                         <div class="flex flex-col items-center justify-center text-center ">
                             <div class="flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-md:mb-[30px]">
@@ -344,8 +252,8 @@
                                     <path d="M30.4998 5.5C27.5151 5.5 24.7834 6.525 22.6081 8.25C19.6993 10.525 17.8528 14.05 17.8528 18C17.8528 20.35 18.5104 22.55 19.6993 24.425C21.8745 28.05 25.871 30.5 30.4998 30.5C33.6869 30.5 36.5957 29.35 38.8216 27.375C39.8081 26.55 40.6681 25.55 41.3257 24.425C42.4893 22.55 43.1469 20.35 43.1469 18C43.1469 11.1 37.481 5.5 30.4998 5.5ZM37.051 16.65L30.2975 22.8C29.8422 23.225 29.2604 23.425 28.6787 23.425C28.0716 23.425 27.4645 23.2 27.0093 22.75L23.8981 19.65C22.9622 18.725 22.9622 17.25 23.8981 16.325C24.834 15.4 26.3263 15.4 27.2622 16.325L28.7545 17.8L33.8387 13.175C34.7998 12.3 36.2922 12.35 37.1775 13.3C38.0628 14.275 38.0122 15.775 37.051 16.65Z" fill="#FF5F01"/>
                                     </svg>
                             </div>
-                            <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Comfort</h3>
-                            <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Various services and benefits for the comfort of our customers.</p>
+                            <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Comfort</h3>
+                            <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Various services and benefits for the comfort of our customers.</p>
                         </div>
                         <div class="flex flex-col items-center justify-center text-center ">
                             <div class="flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-md:mb-[30px]">
@@ -354,8 +262,8 @@
                                     <path d="M34.0685 38.575C34.0685 41.55 32.9384 44.3 31.0377 46.475C28.4949 49.475 24.4623 51.4 19.9418 51.4L13.238 55.275C12.1079 55.95 10.6695 55.025 10.8236 53.75L11.4657 48.825C8.02397 46.5 5.81506 42.775 5.81506 38.575C5.81506 34.175 8.22945 30.3 11.9281 28C14.214 26.55 16.9623 25.725 19.9418 25.725C27.75 25.725 34.0685 31.475 34.0685 38.575Z" fill="#FF5F01"/>
                                     </svg>
                             </div>
-                            <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Support</h3>
-                            <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Professionals customer  support is ready for you 24/7.</p>
+                            <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Support</h3>
+                            <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Professionals customer  support is ready for you 24/7.</p>
                         </div>
                         <div class="flex flex-col items-center justify-center text-center ">
                             <div class="flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-md:mb-[30px]">
@@ -365,50 +273,50 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.625 30.5C3.625 15.6573 15.6573 3.625 30.5 3.625C45.3427 3.625 57.375 15.6573 57.375 30.5C57.375 45.3427 45.3427 57.375 30.5 57.375C15.6573 57.375 3.625 45.3427 3.625 30.5ZM32.375 13C32.375 11.9645 31.5355 11.125 30.5 11.125C29.4645 11.125 28.625 11.9645 28.625 13V13.7702C27.8081 13.9752 27.0065 14.2953 26.2433 14.736C19.4387 18.6647 20.3036 28.7473 27.6779 31.4597L28.625 31.8081V43.5486C27.2878 43.1714 26.0931 42.2924 25.3451 40.9969L24.4062 39.3706C23.8884 38.4738 22.7417 38.1666 21.8449 38.6843C20.9481 39.2021 20.6408 40.3488 21.1586 41.2456L22.0975 42.8719C23.5437 45.3767 25.9817 46.949 28.625 47.3837V48C28.625 49.0355 29.4645 49.875 30.5 49.875C31.5355 49.875 32.375 49.0355 32.375 48V47.2299C33.192 47.025 33.9938 46.7048 34.7572 46.264C41.5618 42.3354 40.697 32.2527 33.3227 29.5403L32.375 29.1918V17.4513C33.7124 17.8284 34.9073 18.7074 35.6554 20.0031L36.5943 21.6294C37.1121 22.5262 38.2588 22.8334 39.1556 22.3157C40.0524 21.7979 40.3597 20.6512 39.8419 19.7544L38.903 18.1281C37.4568 15.6232 35.0185 14.0508 32.375 13.6162V13Z" fill="#FF5F01"/>
                                     </svg>
                             </div>
-                            <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Economical</h3>
-                            <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Affordable car rentals with Akhiyat driver services.</p>
+                            <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Economical</h3>
+                            <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Affordable car rentals with Akhiyat driver services.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="pt-120  pb-[95px] bg-[#F1F3F9] relative max-md:py-70">
+            <section class="pt-120 pb-[95px] bg-[#F1F3F9] relative max-md:py-70">
                 <div class="container max-w-full">
-                    <h2 class="font-grandis-bold text-[42px] mb-120 max-md:mb-70 text-center max-lg:text-[36px] max-sm:text-[30px]">Special Offers</h2>
+                    <h2 class="font-grandis-bold text-[4.2rem] mb-120 max-md:mb-70 text-center max-lg:text-4xl max-sm:text-3xl">Special Offers</h2>
                     <div class="grid grid-cols-2 gap-x-[51px] gap-y-[43px] max-[768px]:grid-cols-1">
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
                             <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
-                                <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
-                                <p class="mb-[83px] font-grandis text-[16px] leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
-                                <a href="http://" class="border-white border border-solid rounded-[5px] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
+                                <h4 class="font-grandis-lg text-[1.8rem] leading-[27px] mb-[13px]">The best deals of the month</h4>
+                                <p class="mb-[83px] font-grandis text-base leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
+                                <a href="http://" class="border-white border border-solid rounded-[0.5rem] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
                             <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
-                                <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
-                                <p class="mb-[83px] font-grandis text-[16px] leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
-                                <a href="http://" class="border-white border border-solid rounded-[5px] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
+                                <h4 class="font-grandis-lg text-[1.8rem] leading-[27px] mb-[13px]">The best deals of the month</h4>
+                                <p class="mb-[83px] font-grandis text-base leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
+                                <a href="http://" class="border-white border border-solid rounded-[0.5rem] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
                             <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
-                                <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
-                                <p class="mb-[83px] font-grandis text-[16px] leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
-                                <a href="http://" class="border-white border border-solid rounded-[5px] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
+                                <h4 class="font-grandis-lg text-[1.8rem] leading-[27px] mb-[13px]">The best deals of the month</h4>
+                                <p class="mb-[83px] font-grandis text-base leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
+                                <a href="http://" class="border-white border border-solid rounded-[0.5rem] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
                             </div>
                         </div>
                         <div class="relative rounded-[15px] overflow-hidden px-[50px] py-[46px] text-white z-[20] max-md:px-[30px]">
                             <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/image-1.png" alt="">
                             <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(4,1,0,0.18)] to-[rgba(0,0,0,0.87)] z-[0]"></div>
                             <div class="relative z-[20]">
-                                <h4 class="font-grandis-lg text-[18px] leading-[27px] mb-[13px]">The best deals of the month</h4>
-                                <p class="mb-[83px] font-grandis text-[16px] leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
-                                <a href="http://" class="border-white border border-solid rounded-[5px] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
+                                <h4 class="font-grandis-lg text-[1.8rem] leading-[27px] mb-[13px]">The best deals of the month</h4>
+                                <p class="mb-[83px] font-grandis text-base leading-[27px]">Cheap car rental in different cities of Morocco : Agadir, Marrakech, Casablanca.</p>
+                                <a href="http://" class="border-white border border-solid rounded-[0.5rem] px-[37px] py-[15px] text-sm leading-[17px] font-grandis-md hover:text-black hover:bg-white transition duration-300">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -417,8 +325,8 @@
             <section class="mt-120 max-md:mt-70 mb-[133px] max-md:pb-[80px]">
                 
                     <div class="container max-w-full">
-                        <h2 class="font-grandis-bold text-[42px] mb-120 max-md:mb-70 text-center max-lg:text-[36px] max-sm:text-[30px]">3 Simple Steps to Rent Your Car</h2>
-                        <div class="grid grid-cols-3 gap-[40px] items-start max-md:grid-cols-2 max-md:gap-[32px] max-xs:grid-cols-1">
+                        <h2 class="font-grandis-bold text-[4.2rem] mb-120 max-md:mb-70 text-center max-lg:text-4xl max-sm:text-3xl">3 Simple Steps to Rent Your Car</h2>
+                        <div class="grid grid-cols-3 gap-[40px] items-start max-md:grid-cols-2 max-md:gap-8 max-xs:grid-cols-1">
                             <div class="flex flex-col items-center justify-center text-center ">
                                 <div class="flex justify-center items-center rounded-full border border-[#D6D6D6] border-solid mb-[50px] w-[149px] h-[149px] max-md:mb-[30px]">
                                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -427,8 +335,8 @@
                                         
                                         
                                 </div>
-                                <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Choose location</h3>
-                                <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Choose your and find
+                                <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Choose location</h3>
+                                <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Choose your and find
                                     your best car.</p>
                             </div>
                             <div class="flex flex-col items-center justify-center text-center ">
@@ -440,8 +348,8 @@
                                         
                                         
                                 </div>
-                                <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Pick-up date</h3>
-                                <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Select your pick up date and
+                                <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Pick-up date</h3>
+                                <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Select your pick up date and
                                     time to book your car.</p>
                             </div>
                             <div class="flex flex-col items-center justify-center text-center ">
@@ -453,8 +361,8 @@
                                         
                                         
                                 </div>
-                                <h3 class="mb-5 font-grandis-md text-[26px] leading-[26px] max-md:text-[20px]">Book your car</h3>
-                                <p class="font-grandis text-[16px] leading-[26px] text-gray-500 max-md:text-sm">Book your car and we will deliver it directly to you.</p>
+                                <h3 class="mb-5 font-grandis-md text-[2.6rem] leading-[26px] max-md:text-xl">Book your car</h3>
+                                <p class="font-grandis text-base leading-[26px] text-gray-500 max-md:text-sm">Book your car and we will deliver it directly to you.</p>
                             </div>
                         </div>
                     </div>
@@ -465,7 +373,7 @@
                     <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="img/review-bg.jpg" alt="">
                     <div class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(0, 0, 0, 0.8)] to-[rgba(4, 1, 0, 0.7)] z-[0]"></div>
                     <div>
-                        <div class="splide review-slide" data-splide='{
+                        <div class="splide" data-splide='{
                             "type": "loop",
                             "perPage": 3,
                             "focus": "center",
@@ -478,7 +386,7 @@
                                 "991": {"perPage": 1, "padding": "120px"},
                                 "1120": {"perPage": 2}
                             }}'>
-                            <h2 class="font-grandis-bold text-[42px] mb-120 max-md:mb-70 text-center text-[#FFEEEE] max-lg:text-[36px] max-sm:text-[30px]">Reviews</h2>
+                            <h2 class="font-grandis-bold text-[4.2rem] mb-120 max-md:mb-70 text-center text-[#FFEEEE] max-lg:text-4xl max-sm:text-3xl">Reviews</h2>
                             <div class="splide__track">
                                 <div class="splide__list">
                                     <div class="splide__slide px-[28px] pt-[25px] pb-[32px] rounded-[10.8px] bg-[#F8F8F8]">
@@ -488,8 +396,8 @@
                                                 </svg>
                                                 
                                         </span>
-                                        <p class="mb-[68px]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
-                                        <span>David, Belgium</span>
+                                        <p class="mb-[68px] text-[2.1rem] leading-[3.24rem] text-[#413D45]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
+                                        <span class="text-[#67646A] text-[1.1rem]">David, Belgium</span>
                                     </div>
                                     <div class="splide__slide px-[28px] pt-[25px] pb-[32px] rounded-[10.8px] bg-[#F8F8F8]">
                                         <span class="block mb-[26px]">
@@ -498,8 +406,8 @@
                                                 </svg>
                                                 
                                         </span>
-                                        <p class="mb-[68px]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
-                                        <span>David, Belgium</span>
+                                        <p class="mb-[68px] text-[2.1rem] leading-[3.24rem] text-[#413D45]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
+                                        <span class="text-[#67646A] text-[1.1rem]">David, Belgium</span>
                                     </div>
                                     <div class="splide__slide px-[28px] pt-[25px] pb-[32px] rounded-[10.8px] bg-[#F8F8F8]">
                                         <span class="block mb-[26px]">
@@ -508,8 +416,8 @@
                                                 </svg>
                                                 
                                         </span>
-                                        <p class="mb-[68px]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
-                                        <span>David, Belgium</span>
+                                        <p class="mb-[68px] text-[2.1rem] leading-[3.24rem] text-[#413D45]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
+                                        <span class="text-[#67646A] text-[1.1rem]">David, Belgium</span>
                                     </div>
                                     <div class="splide__slide px-[28px] pt-[25px] pb-[32px] rounded-[10.8px] bg-[#F8F8F8]">
                                         <span class="block mb-[26px]">
@@ -518,8 +426,8 @@
                                                 </svg>
                                                 
                                         </span>
-                                        <p class="mb-[68px]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
-                                        <span>David, Belgium</span>
+                                        <p class="mb-[68px] text-[2.1rem] leading-[3.24rem] text-[#413D45]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
+                                        <span class="text-[#67646A] text-[1.1rem]">David, Belgium</span>
                                     </div>
                                     <div class="splide__slide px-[28px] pt-[25px] pb-[32px] rounded-[10.8px] bg-[#F8F8F8]">
                                         <span class="block mb-[26px]">
@@ -528,23 +436,23 @@
                                                 </svg>
                                                 
                                         </span>
-                                        <p class="mb-[68px]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
-                                        <span>David, Belgium</span>
+                                        <p class="mb-[68px] text-[2.1rem] leading-[3.24rem] text-[#413D45]">Fantastic experience with smooth booking, excellent car quality, and outstanding service!</p>
+                                        <span class="text-[#67646A] text-[1.1rem]">David, Belgium</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="splide__arrows container max-w-full">
-                                <button class="splide__arrow splide__arrow--prev transform-none top-[5px] left-[110px] max-md:left-[55px]">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
-                                    </svg>
-                                </button>
-                                <button class="splide__arrow splide__arrow--next transform none top-[5px] right-[110px] max-md:right-[55px]">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
-                                    </svg>
-                                        
-                                </button>
+                            <div class="splide__arrows container max-w-full absolute flex justify-between top-[1.6rem]">
+                              <button class="splide__arrow splide__arrow--prev rotate-180 w-[3.8rem] h-[3.8rem] rounded-full bg-[#D9D9D9] bg-opacity-40 flex items-center justify-center hover:bg-opacity-100">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
+                                </svg>
+                              </button>
+                              <button class="splide__arrow splide__arrow--next w-[3.8rem] h-[3.8rem] rounded-full bg-[#D9D9D9] bg-opacity-40 flex items-center justify-center hover:bg-opacity-100">
+                                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M2.28258 0.545113C1.93935 0.204932 1.38533 0.207404 1.04515 0.550633C0.704972 0.893864 0.707444 1.44788 1.05067 1.78806L3.10747 3.82658C3.94221 4.65391 4.51482 5.22329 4.90227 5.70574C5.27863 6.17439 5.40775 6.47541 5.44211 6.745C5.46369 6.91428 5.46369 7.08556 5.44211 7.25484C5.40775 7.52443 5.27863 7.82545 4.90227 8.29409C4.51482 8.77654 3.94222 9.34593 3.10747 10.1733L1.05067 12.2118C0.707445 12.552 0.704973 13.106 1.04515 13.4492C1.38534 13.7924 1.93935 13.7949 2.28258 13.4547L4.37643 11.3795C5.16507 10.5979 5.80962 9.95907 6.26673 9.38988C6.74206 8.798 7.08615 8.19724 7.17807 7.47611C7.21837 7.15991 7.21837 6.83993 7.17807 6.52373C7.08615 5.8026 6.74206 5.20183 6.26673 4.60995C5.80962 4.04077 5.16507 3.40197 4.37644 2.62037L2.28258 0.545113Z" fill="white"/>
+                                  </svg>
+                                      
+                              </button>
                             </div>
                         </div>
                     </div>
@@ -553,12 +461,12 @@
             <section class="py-[90px]">
                 <div class="container max-w-full">
                     <div class="flex justify-between space-x-[130px] max-lg:flex-col max-lg:space-x-0 max-lg:gap-[40px]">
-                        <div class="[&>p]:leading-[31.96px] [&>p]:font-grandis [&>p]:text-[17px] [&>p]:space-y-1">
-                            <h4 class="mb-[30px] font-grandis-bold text-[23] leading-[26px]">Contact us:</h4>
+                        <div class="[&>p]:leading-[31.96px] [&>p]:font-grandis [&>p]:text-[1.7rem] [&>p]:space-y-1">
+                            <h4 class="mb-[30px] font-grandis-bold text-[2.3rem] leading-[26px]">Contact us:</h4>
                             <p>Book by phone at <a class="text-orange-500" tel="+212661377106">+212 6 61 37 71 06</a></p>
                             <p>Open Monday to Friday from <span class="text-orange-500">8h at 23h</span></p>
                             <p>and Saturday and Sunday from <span class="text-orange-500">9h at 23h</span></p>
-                            <a href="http://" class="text-white bg-orange-500 p-4 rounded-[10px] flex w-max mt-[37px] hover:bg-[#ff7728] transition duration-300 ease-in">
+                            <a href="http://" class="text-white bg-orange-500 p-4 rounded-[1rem] flex w-max mt-[37px] hover:bg-[#ff7728] transition duration-300 ease-in">
                                 <svg class="mr-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.2516 3.63446C20.1056 2.47742 18.7408 1.56016 17.2366 0.93617C15.7324 0.312183 14.1191 -0.00603253 12.4906 8.66016e-05C5.66719 8.66016e-05 0.10625 5.55946 0.1 12.3845C0.1 14.5704 0.671875 16.697 1.75156 18.5798L0 25.0001L6.56875 23.2782C8.38513 24.2692 10.4215 24.7877 12.4906 24.786H12.4969C19.3219 24.786 24.8813 19.2267 24.8875 12.3954C24.8889 10.7674 24.5682 9.15514 23.9439 7.65156C23.3197 6.14798 22.4057 4.78274 21.2516 3.63446ZM12.4906 22.6891C10.6456 22.6877 8.83473 22.1913 7.24687 21.2516L6.87187 21.0266L2.975 22.0485L4.01562 18.247L3.77188 17.8548C2.74032 16.2147 2.19476 14.3158 2.19844 12.3782C2.19844 6.71259 6.81875 2.09071 12.4969 2.09071C13.8496 2.08828 15.1894 2.35364 16.4391 2.87148C17.6888 3.38932 18.8236 4.1494 19.7781 5.1079C20.7358 6.06282 21.495 7.19781 22.012 8.44747C22.529 9.69713 22.7937 11.0368 22.7906 12.3891C22.7844 18.0751 18.1641 22.6891 12.4906 22.6891ZM18.1391 14.9798C17.8313 14.8251 16.3109 14.0766 16.025 13.9704C15.7406 13.8688 15.5328 13.8157 15.3297 14.1251C15.1219 14.4329 14.5281 15.1345 14.35 15.336C14.1719 15.5438 13.9875 15.5673 13.6781 15.4141C13.3703 15.2579 12.3719 14.9329 11.1906 13.8751C10.2688 13.0548 9.65156 12.0391 9.46719 11.7313C9.28906 11.422 9.45 11.2563 9.60469 11.1016C9.74062 10.9641 9.9125 10.7391 10.0672 10.561C10.2234 10.3829 10.275 10.2516 10.3766 10.0454C10.4781 9.83602 10.4297 9.6579 10.3531 9.50321C10.275 9.34852 9.65781 7.82196 9.39688 7.20634C9.14688 6.59852 8.89219 6.6829 8.70156 6.67509C8.52344 6.66415 8.31563 6.66415 8.10781 6.66415C7.9509 6.66814 7.7965 6.70448 7.65427 6.77089C7.51204 6.8373 7.38505 6.93235 7.28125 7.05009C6.99687 7.35946 6.20156 8.1079 6.20156 9.63446C6.20156 11.161 7.31094 12.6282 7.46719 12.836C7.62031 13.0438 9.64531 16.1673 12.7531 17.511C13.4875 17.8313 14.0656 18.0204 14.5172 18.1641C15.2594 18.4016 15.9297 18.3657 16.4641 18.2891C17.0578 18.1985 18.2938 17.5391 18.5547 16.8157C18.8109 16.0907 18.8109 15.472 18.7328 15.3423C18.6562 15.211 18.4484 15.1345 18.1391 14.9798Z" fill="white"/>
                                 </svg>
@@ -567,8 +475,8 @@
                             </a>
                         </div>
                         <div>
-                            <h4 class="mb-[30px] font-grandis-bold text-[23] leading-[26px]">Contact us:</h4>
-                            <ul class="grid grid-cols-2 gap-x-[49px] space-y-1 list-disc list-inside [&>li]:leading-[31.96px] [&>li]:font-grandis [&>li]:text-[17px] max-md:grid-cols-1">
+                            <h4 class="mb-[30px] font-grandis-bold text-[2.3rem] leading-[26px]">Contact us:</h4>
+                            <ul class="grid grid-cols-2 gap-x-[49px] space-y-1 list-disc list-inside [&>li]:leading-[31.96px] [&>li]:font-grandis [&>li]:text-[1.7rem] max-md:grid-cols-1">
                                 <li>24/7 Customer Support</li>
                                 <li>Economy and Luxury Cars</li>
                                 <li>Unlimited Mileage</li>
@@ -576,7 +484,7 @@
                                 <li>Reliable and Well-Maintained Fleet</li>
                                 <li>Multiple Pickup Locations</li>
                             </ul>
-                            <a href="http://" class="rounded-[10px] text-white bg-black py-[21px] px-[29px] w-max block mt-[30px]">Read more</a>
+                            <a href="http://" class="rounded-[1rem] text-white bg-black py-[21px] px-[29px] w-max block mt-[30px]">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -586,46 +494,46 @@
         </main>
         <footer class="bg-black pt-[48px] pb-[34px]">
             <div class="container max-w-full">
-                <div class="flex justify-between text-white pb-[88px] border-b-[1px] border-gray-500 max-md:flex-wrap max-md:gap-y-[40px]">
-                    <div class="[&>p]:font-grandis [&>p]:text-[11px] [&>p]:leading-[16.5px] [&>p]:text-[#D6D6D6] space-y-[24px] pr-[181px] max-lg:pr-[90px] max-md:w-full">
+                <div class="flex justify-between text-white pb-[88px] border-b border-gray-500 max-md:flex-wrap max-md:gap-y-[40px]">
+                    <div class="[&>p]:font-grandis [&>p]:text-[1.1rem] [&>p]:leading-[16.5px] [&>p]:text-[#D6D6D6] space-y-[24px] pr-[181px] max-lg:pr-[90px] max-md:w-full">
                         <img src="img/svg/logo.svg" alt="" class="mb-[32px]">
                         <p>123 Avenue des Palmiers, 40003 <br> Marrakech, Morocco</p>
                         <p>+212 705 050 166</p>
                         <p>ekscars@contact.com</p>
                     </div>
                     <div class="pr-[137px] max-lg:pr-[70px] max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Vehicles</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Vehicles</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Volkswagen</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Skoda</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Hyundai</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Dacia</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Citroën</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Renault</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Fiat</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Volkswagen</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Skoda</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Hyundai</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Dacia</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Citroën</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Renault</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Fiat</a></li>
                         </ul>
                     </div>
                 
                     <div class="pr-[33px] max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Services</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Services</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Casablanca</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Marrakech</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Tangier</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Long Term Car Rental in Marrakech</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car Rental with Driver</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Minibus Transfers</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Casablanca</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Marrakech</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Tangier</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Long Term Car Rental in Marrakech</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car Rental with Driver</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Minibus Transfers</a></li>
                         </ul>
                     </div>
                 
                     <div class="max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Information</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Information</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Damage Management Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Deposit Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Privacy Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms of Use</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms & Conditions</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Damage Management Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Deposit Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms of Use</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>

@@ -5,10 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>details</title>
         <link rel="stylesheet" href="/src/css/main.css">
-        <script src="src/js/lib/alpine.js"></script>
-        <script src="src/js/lib/slimSelect.js"></script>
-        <script src="src/js/lib/splide.js"></script>
-        <script src="src/js/lib/flatpicker.js"></script>
         
     </head>
     <body class="font-grandis overflow-x-hidden" x-data="{ open: false, atTop: false }" :class="{ 'max-[1024px]:h-svh fixed overflow-hidden': open }">
@@ -21,77 +17,24 @@
                     </a>
                     <nav class="max-lg:fixed max-lg:inset-0 max-lg:bg-black max-lg:z-[999] max-lg:p-10  max-lg:w-full max-lg:h-svh" :class="{'max-lg:translate-x-0 ': open, 'max-lg:-translate-x-full': !open}" x-transition>
                         <ul class="flex space-x-[35px] max-lg:flex-col max-lg:space-y-[35px] max-lg:space-x-0">
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Home</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" target="_blank" href="/vehicles.html">Vehicles</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Services</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Promotions</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">News</a></li>
-                            <li><a class="text-white text-[14px] leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">My Budget</a></li>
-                            <div class="nav-right flex flex-col gap-y-[32px] lg:hidden [&>.price>.ss-arrow]:hidden">
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Home</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" target="_blank" href="/vehicles.html">Vehicles</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Services</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">Promotions</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">News</a></li>
+                            <li><a class="text-white text-sm leading-[17.92px] capitalize transition ease-in hover:text-orange-500" href="">My Budget</a></li>
+                            <div class="nav-right flex flex-col gap-y-8 lg:hidden [&>.slim-select>.ss-arrow]:hidden">
                               <select
                                   name="price-switch"
                                   id="price-v"
-                                  class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                                  class="slim-select w-max m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
                                   >
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
-                                  <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="euro">EURO | €</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="dollar">DOLLAR | $</option>
+                                  <option class="bg-transparent text-gray-700 text-xs" value="mad">MAD | DH</option>
                               </select>
             
-                                <div class="currency-switcher">
-                                    <div class="dropdown relative">
-                                        <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[5px] flex items-center text-white">
-                                            
-
-                                            <span>EN</span>
-                                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_45_1098)">
-                                                <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                                <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                                <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_45_1098">
-                                                <rect width="17" height="14" rx="1" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div class="list [&>.selected]:bg-[rgba(36,60,187,0.2)] [&>.selected]:pointer-events-none">
-                                        <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
-                                            
-
-                                            <span>EN</span>
-                                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_45_1098)">
-                                                <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                                <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                                <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_45_1098">
-                                                <rect width="17" height="14" rx="1" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
-                                            
-                                            <span>FR</span>
-                                            <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
-                                        </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
+                              <select name="lang" id="lang" class="slim-select w-max slim-select-lang m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none">
                             </div>
                         </ul>
                         <div class="lg:hidden fixed top-[32px] max-[992px]:right-[40px] max-[640px]:right-[25px]" @click="open = false">
@@ -102,72 +45,19 @@
                         
                     </nav>
                     
-                    <div class="nav-right flex items-center gap-[32px] max-lg:hidden mb-[-5px] [&>.price>.ss-arrow]:hidden">
+                    <div class="nav-right flex items-center gap-8 max-lg:hidden mb-[-5px] [&>.slim-select>.ss-arrow]:hidden">
                         <select
                             name="price-switch"
                             id="price"
-                            class="price m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
+                            class="slim-select w-max m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none"
                             >
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="euro">EURO | €</option>
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="dollar">DOLLAR | $</option>
-                            <option class="bg-transparent text-gray-700 text-[12px]" value="mad">MAD | DH</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="euro">EURO | €</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="dollar">DOLLAR | $</option>
+                            <option class="bg-transparent text-gray-700 text-xs" value="mad">MAD | DH</option>
                         </select>
 
                         
-                        <div class="currency-switcher">
-                            <div class="dropdown relative">
-                                <div class="caption font-grandis-md leading-[17.92px] text-sm cursor-pointer gap-[6px] flex items-center text-white">
-                                    
-
-                                    <span>EN</span>
-                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_45_1098)">
-                                        <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                        <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                        <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_45_1098">
-                                        <rect width="17" height="14" rx="1" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="list">
-                                <div class="item selected flex items-center p-[10px] gap-[5px]" data-item="EN">
-                                    
-
-                                    <span>EN</span>
-                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_45_1098)">
-                                        <rect width="17" height="14" rx="1" fill="#1A47B8"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.80845 0H0V2.33333L15.1817 14L17 14V11.6667L1.80845 0Z" fill="white"/>
-                                        <path d="M0.603175 0L17 12.6331V14H16.411L0 1.35385V0H0.603175Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.381 0H17.0001V2.33333C17.0001 2.33333 6.48419 10.1062 1.61911 14H6.10352e-05V11.6667L15.381 0Z" fill="white"/>
-                                        <path d="M17 0H16.4509L0 12.644V14H0.603175L17 1.36408V0Z" fill="#F93939"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.1824 0H10.8317V4.31836H17V9.67879H10.8317V14H6.1824V9.67879H0V4.31836H6.1824V0Z" fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.15789 0H9.8421V5.38462H17V8.61539H9.8421V14H7.15789V8.61539H0V5.38462H7.15789V0Z" fill="#F93939"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_45_1098">
-                                        <rect width="17" height="14" rx="1" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="item flex items-center p-[10px] gap-[5px]" data-item="FR">
-                                    
-                                    <span>FR</span>
-                                    <svg  width="17" height="14" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 356.18"><path fill="#E1000F" d="M345.04 0h139C499.44.1 512 12.72 512 28.13v299.91c0 15.47-12.65 28.13-28.13 28.14H345.04V0zM15.11 352.95zm-9.54-8.15z"/><path fill="#fff" d="M27.96 0h317.08v356.18H27.98C12.57 356.09 0 343.46 0 328.04V28.14C0 12.72 12.56.1 27.96 0z"/><path fill="#273375" d="M27.96 0h138.99v356.18H28c-15.42-.08-28-12.71-28-28.14V28.14C0 12.72 12.56.1 27.96 0z"/></svg>
-                                </div>
-                                
-                                </div>
-                            </div>
-                        </div>
+                        <select name="lang-desk" id="lang-desk" class="slim-select w-max slim-select-lang m-0 py-0 appearance-none cursor-pointer text-sm text-white bg-transparent outline-none border-none focus:shadow-none">
                     </div>
                     <div class="lg:hidden" @click="open = true">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -185,19 +75,19 @@
             <section class="bg-black pt-120">
                 <h1 class="sr-only">EKSCARS</h1>
                 <div class="container max-w-full">
-                    <div class="border-solid border-t-[1.5px] border-[#413D45]">
+                    <div class="border-solid border-t-[0.15rem] border-[#413D45]">
                         <div class="pt-[40px] pb-[46px] max-w-[924px] mx-auto flex items-center gap-[33px] text-white max-[846px]:flex-col max-[846px]:text-center">
-                            <div class="max-[846px]:mb-[10px]">
-                                <p class="font-grandis-bold text-[20px] leading-[40.9px]  ">Agadir -  El Massira Airport </p>
-                                <span class="block font-grandis-md text-[14px] leading-[28.63px]  ">Aug 22 | 12:30 PM - Aug 26 | 8:30 AM</span>
+                            <div class="max-[846px]:mb-[1rem]">
+                                <p class="font-grandis-bold text-xl leading-[40.9px]  ">Agadir -  El Massira Airport </p>
+                                <span class="block font-grandis-md text-sm leading-[28.63px]  ">Aug 22 | 12:30 PM - Aug 26 | 8:30 AM</span>
                             </div>
-                            <div class="border-dashed border-orange-500 border-b-[1.5px] flex-1 relative max-[846px]:rotate-90 max-[846px]:w-[55px]">
+                            <div class="border-dashed border-orange-500 border-b-[0.15rem] flex-1 relative max-[846px]:rotate-90 max-[846px]:w-[55px]">
                                 <span class="absolute left-0 w-[6px] h-[6px] bg-orange-500 top-[-3px] rotate-45 max-[846px]:left-[-7px]"></span>
                                 <span class="absolute right-0 w-[6px] h-[6px] bg-orange-500 top-[-3px] rotate-45"></span>
                             </div>
                             <div class="">
-                                <p class="font-grandis-bold text-[20px] leading-[40.9px]  ">Marrakech - Menara Airport</p>
-                                <span class="font-grandis-md text-[14px] leading-[28.63px] block ">Aug 22 | 12:30 PM - Aug 26 | 8:30 AM</span>
+                                <p class="font-grandis-bold text-xl leading-[40.9px]  ">Marrakech - Menara Airport</p>
+                                <span class="font-grandis-md text-sm leading-[28.63px] block ">Aug 22 | 12:30 PM - Aug 26 | 8:30 AM</span>
                             </div>
                         </div>
                     </div>
@@ -206,26 +96,26 @@
             </section>
             <section class="mt-[52px] mb-[133px]">
                 <div class="container max-w-full">
-                    <h2 class="font-grandis-bold text-[40px] mb-[45px] flex items-center max-lg:text-[36px] max-sm:text-[30px]">
+                    <h2 class="font-grandis-bold text-[40px] mb-[45px] flex items-center max-lg:text-4xl max-sm:text-3xl">
                         <span class="mr-[16px]">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3329 29.2857L5 14.9514L18.9771 0.973562L22.5014 4.49714L12.0464 14.9514L22.8571 25.7621L19.3329 29.2857Z" fill="black"/>
                             </svg>
                         </span>Skoda Octavia
                     </h2>
-                    <div class="pb-[44px] border-solid border-b-[1.5px] border-[#D6D6D6]">
+                    <div class="pb-[44px] border-solid border-b-[0.15rem] border-[#D6D6D6]">
                         <div class="px-[25px] flex justify-between items-baseline">
-                            <div class="flex flex-col gap-[28px] items-center"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">1</span><p class="text-orange-500 font-grandis-md text-[23px] leading-[29.44px]">Search</p></div>
+                            <div class="flex flex-col gap-[28px] items-center"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">1</span><p class="text-orange-500 font-grandis-md text-[2.3rem] leading-[29.44px]">Search</p></div>
                             <div class="flex-1 h-[3px] bg-orange-500 translate-y-[-10px]"></div>
-                            <div class="flex flex-col gap-[28px] items-center"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">2</span><p class="text-orange-500 font-grandis-md text-[23px] leading-[29.44px]">Results</p></div>
+                            <div class="flex flex-col gap-[28px] items-center"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">2</span><p class="text-orange-500 font-grandis-md text-[2.3rem] leading-[29.44px]">Results</p></div>
                             <div class="flex-1 h-[3px] border-solid border-t-2 border-orange-500 translate-y-[-10px]"></div>
-                            <div class="flex flex-col gap-[28px] items-center ml-[8px]"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">3</span><p class="text-orange-500 font-grandis-md text-[23px] leading-[29.44px]">Book</p></div>
+                            <div class="flex flex-col gap-[28px] items-center ml-[8px]"><span class="bg-orange-500 rounded-full text-white w-[60px] h-[60px] flex items-center justify-center font-grandis-md text-[31px] leading-[39.68px]">3</span><p class="text-orange-500 font-grandis-md text-[2.3rem] leading-[29.44px]">Book</p></div>
                         </div>
                     </div>
                     <div class="pt-[48px]">
                         <div class="flex gap-[45px] max-lg:flex-col-reverse">
                             <div class="h-max relative rounded-lg overflow-hidden px-[47px] pb-[46px] pt-[41px] max-md:px-[20px] max-lg:max-w-full lg:max-w-[35.87%] lg:w-full">
-                                <h3 class="z-[20] relative text-white uppercase font-grandis-bold text-[20px] leading-[25.6px] mb-[35px] pb-[11px] after:absolute after:content-[''] after:w-[102px] after:bg-orange-500 after:h-[2px] after:bottom-0 after:left-0">Edit your rent</h3>
+                                <h3 class="z-[20] relative text-white uppercase font-grandis-bold text-xl leading-[25.6px] mb-[35px] pb-[11px] after:absolute after:content-[''] after:w-[102px] after:bg-orange-500 after:h-[2px] after:bottom-0 after:left-0">Edit your rent</h3>
                                 <form action="" class="z-[20] relative">
                                     <div class="grid grid-cols-1 gap-[26px] mb-[27px]">
                                         <div>
@@ -235,10 +125,10 @@
                                                     <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
                                                 </svg>
                                                     
-                                                <select id="departure" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
-                                                  <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
-                                                  <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
-                                                  <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
+                                                <select id="departure" class="slim-select rounded-md font-grandis text-[1.3rem] pl-[36px] h-[50px] text-gray-500">
+                                                  <option class="px-[1rem]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                                  <option class="px-[1rem]" value="RAK">Marrakech Menara Airport</option>
+                                                  <option class="px-[1rem]" value="AGA">Agadir Al Massira Airport</option>
                                                 </select>
                                             </div>
                                             <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
@@ -251,7 +141,7 @@
                                                     </svg>
                                                 </span>
                                                 <div class="flex items-center relative max-md:flex-[100%]">
-                                                    <input type="text" class="text-gray-500 font-grandis text-[13px] leading-[16.64px] date-input w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
+                                                    <input type="text" class="text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] flatpicker-item w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
                                                     <svg class="absolute right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
                                                     </svg>
@@ -260,7 +150,7 @@
                                                 
                                                 <span class="block w-[0.75px] h-full bg-gray-500"></span>
                                                 <div class="flex items-center relative">
-                                                    <input type="text" class="time-input text-gray-500 font-grandis text-[13px] pl-5 leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer max-md:pl-[10px]" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
+                                                    <input type="text" class="flatpicker-item text-gray-500 font-grandis text-[1.3rem] pl-5 leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer max-md:pl-[1rem]" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
                                                     <svg class="absolute right-[0px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
                                                     </svg>
@@ -274,10 +164,10 @@
                                                 <svg class="absolute left-[16px] top-[16px] z-[1]" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M14.75 11V9.5L8.75 5.75V1.625C8.75 1.0025 8.2475 0.5 7.625 0.5C7.0025 0.5 6.5 1.0025 6.5 1.625V5.75L0.5 9.5V11L6.5 9.125V13.25L5 14.375V15.5L7.625 14.75L10.25 15.5V14.375L8.75 13.25V9.125L14.75 11Z" fill="#FF5F01"/>
                                                 </svg>
-                                                <select id="arrival" class="airport-select rounded-md font-grandis text-[13px] pl-[36px] h-[50px] text-gray-500">
-                                                  <option class="px-[10px]" value="CMN">Mohammed V International Airport (Casablanca)</option>
-                                                  <option class="px-[10px]" value="RAK">Marrakech Menara Airport</option>
-                                                  <option class="px-[10px]" value="AGA">Agadir Al Massira Airport</option>
+                                                <select id="arrival" class="slim-select rounded-md font-grandis text-[1.3rem] pl-[36px] h-[50px] text-gray-500">
+                                                  <option class="px-[1rem]" value="CMN">Mohammed V International Airport (Casablanca)</option>
+                                                  <option class="px-[1rem]" value="RAK">Marrakech Menara Airport</option>
+                                                  <option class="px-[1rem]" value="AGA">Agadir Al Massira Airport</option>
                                                 </select>
                                             </div>
                                             <div class="h-[50px] flex items-center px-[15px] rounded-lg bg-white justify-between">
@@ -290,7 +180,7 @@
                                                     </svg>
                                                 </span>
                                                 <div class="flex items-center relative max-md:flex-[100%]">
-                                                    <input type="text" class="text-gray-500 font-grandis text-[13px] leading-[16.64px] date-input w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
+                                                    <input type="text" class="text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] flatpicker-item w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Date" data-flatpickr='{"dateFormat": "d/m/Y", "defaultDate": "today"}'>
                                                     <svg class="absolute right-[8px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
                                                     </svg>
@@ -298,8 +188,8 @@
                                                 </div>
                                                 
                                                 <span class="block w-[0.75px] h-full bg-gray-500"></span>
-                                                <div class="flex items-center relative pl-5 max-md:pl-[10px] ">
-                                                    <input type="text" class="time-input text-gray-500 font-grandis text-[13px] leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
+                                                <div class="flex items-center relative pl-5 max-md:pl-[1rem] ">
+                                                    <input type="text" class="flatpicker-item text-gray-500 font-grandis text-[1.3rem] leading-[16.64px] w-full border-none outline-none bg-transparent cursor-pointer" placeholder="Select Time" data-flatpickr='{"enableTime": true, "noCalendar": true, "dateFormat": "h:i K", "defaultDate": "today"}'>
                                                     <svg class="absolute right-[0px]" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.14952 1.05713C9.36821 0.831981 9.36662 0.46856 9.14597 0.24541C8.92532 0.0222589 8.56917 0.0238803 8.35048 0.249031L7.04 1.59824C6.50815 2.14581 6.14212 2.52143 5.83197 2.77559C5.5307 3.02247 5.33719 3.10717 5.16388 3.12971C5.05506 3.14386 4.94494 3.14386 4.83612 3.12971C4.66281 3.10717 4.4693 3.02247 4.16803 2.77559C3.85788 2.52143 3.49185 2.14581 2.96 1.59824L1.64952 0.249032C1.43083 0.0238809 1.07468 0.0222595 0.854031 0.24541C0.633383 0.468561 0.631794 0.831981 0.850482 1.05713L2.18457 2.43065C2.68703 2.94798 3.09769 3.37079 3.4636 3.67064C3.84409 3.98245 4.23029 4.20816 4.69388 4.26846C4.89715 4.2949 5.10285 4.2949 5.30612 4.26846C5.76971 4.20816 6.15591 3.98245 6.53641 3.67064C6.90231 3.37079 7.31297 2.94798 7.81542 2.43065L9.14952 1.05713Z" fill="#FF5F01"/>
                                                     </svg>
@@ -308,23 +198,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="font-grandis-md text-[17px] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[15px] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Search</button>
+                                    <button class="font-grandis-md text-[1.7rem] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[1.5rem] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Search</button>
                                 </form>
-                                <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="./public/img/form-bg.jpg" alt="">
+                                <img class="absolute object-cover w-full h-full inset-0 z-[-1]" src="./img/form-bg.jpg" alt="">
                                 <div class="absolute w-full h-full inset-0 bg-black bg-opacity-50 z-[0] shadow-[0px_1px_8px_rgba(0,0,0,0.16)]"></div>
                                 
                             </div>
                             <div class="grid grid-cols-1 gap-[20px] lg:max-w-[64.62%] lg:w-full">
                                 <div class="flex bg-white rounded-lg shadow-[0px_1px_8px_rgba(0,0,0,0.16)] max-md:flex-col mb-[20px]">
-                                    <div class="px-[85px] pt-[46px] pb-[40px] flex flex-col items-center justify-between border-solid border-r-[1px] border-[#D9D9D9] max-md:border-r-0 max-md:border-b-[1px] max-md:py-[30px] max-md:px-[20px]">
+                                    <div class="px-[85px] pt-[46px] pb-[40px] flex flex-col items-center justify-between border-solid border-r border-[#D9D9D9] max-md:border-r-0 max-md:border-b-[1px] max-md:py-[30px] max-md:px-[20px]">
                                         
                                         <img class="max-w-[249px] w-full mb-[35px]" src="img/octavia.png" alt="">
-                                        <a href="http://" class="rounded-[5px] text-center text-[#007BFF] border-[1px] border-solid border-[#007BFF] p-[15px] w-full font-grandis-md text-sm leading-[17px]">Quote by email</a>
+                                        <a href="http://" class="rounded-[0.5rem] text-center text-[#007BFF] border border-solid border-[#007BFF] p-[1.5rem] w-full font-grandis-md text-sm leading-[17px]">Quote by email</a>
                                     </div>
                                     <div class="pl-[49px] pt-[37px] pr-[37px] pb-[40px] max-md:py-[30px] max-md:px-[20px]">
                                         <div>
-                                            <h4 class="font-grandis-bold text-[18px] leading-[17px] text-black mb-[15px]">Skoda Octavia</h4>
-                                            <ul class="mb-[19px] text-gray-500 text-[10px] leading-[17px] flex flex-wrap gap-x-[15px] gap-y-[8px] [&>li]:flex [&>li]:items-center [&>li]:gap-[4px]">
+                                            <h4 class="font-grandis-bold text-[1.8rem] leading-[17px] text-black mb-[15px]">Skoda Octavia</h4>
+                                            <ul class="mb-[19px] text-gray-500 text-[1rem] leading-[17px] flex flex-wrap gap-x-[15px] gap-y-[8px] [&>li]:flex [&>li]:items-center [&>li]:gap-[4px]">
                                                 <li>Economic</li>
                                                 <li>
                                                     <i>
@@ -371,9 +261,9 @@
                                                     4
                                                 </li>
                                             </ul>
-                                            <ul class="[&>li]:text-[11px] [&>li]:leading-[17px] [&>li]:text-gray-500 [&>li]:flex [&>li]:items-center [&>li]:gap-[4px]">
+                                            <ul class="[&>li]:text-[1.1rem] [&>li]:leading-[17px] [&>li]:text-gray-500 [&>li]:flex [&>li]:items-center [&>li]:gap-[4px]">
                                             
-                                                <span class="block mb-[19px] font-grandis-md text-[12px] leading-[17px]">You get free :</span>
+                                                <span class="block mb-[19px] font-grandis-md text-xs leading-[17px]">You get free :</span>
                                                 <li><span class="text-orange-500">✓</span>All risk insurance</li>
                                                 <li><span class="text-orange-500">✓</span>Baby seat/ booster seat</li>
                                                 <li><span class="text-orange-500">✓</span>Delivery: airport-city-hotel</li>
@@ -384,7 +274,7 @@
 
                                     </div>
                                 </div>
-                                <div class="px-[22px] py-[25px] bg-[#F1F3F9] rounded-lg mb-[4px] space-y-[32px] [&>p]:leading-[23px] [&>p]:text-[12px] [&>p>span]:font-grandis-md [&>p>span>b]:font-grandis-bold">
+                                <div class="px-[22px] py-[25px] bg-[#F1F3F9] rounded-lg mb-[4px] space-y-[32px] [&>p]:leading-[23px] [&>p]:text-xs [&>p>span]:font-grandis-md [&>p>span>b]:font-grandis-bold">
                                     <p>✓ <span>Skoda <b>Octavia</b></span> is an excellent choice for car rental and is highly recommended by Akhiyat Driver Cars. If you want to rent a car that handles city streets and highways as well as unpredictable country roads,<span>rent a Skoda <b>Octavia</b> car.</span></p>
                                     <p>✓ Whether you need to rent the <span>Skoda <b>Octavia</b> in Agadir, Marrakech or Casablanca</span>, renting this Pearl will only be satisfactory and offers you better quality/price ratio!</p>
                                     <p>✓ <span>Skoda <b>Octavia</b> Hiring</span> is ideal for a young family or a small group of friends.</p>
@@ -398,11 +288,11 @@
                                         </svg>
 
                                     </i>
-                                    <span class="text-[13px] leading-[17px]">Drivers must have held their driver’s license for at least 2 years for this vehicle</span> 
+                                    <span class="text-[1.3rem] leading-[17px]">Drivers must have held their driver’s license for at least 2 years for this vehicle</span> 
                                 </div>
 
                                 
-                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border-[1px] border-solid border-[#959595]">
+                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border border-solid border-[#959595]">
                                     <div class="flex justify-between mb-[20px] items-start">
                                             <div class="flex gap-[17px] font-grandis-md">
                                                 
@@ -412,13 +302,13 @@
                                                     </svg>
                                                 </i>
                                                 <div>
-                                                    <p class="mb-[20px] text-[13px] leading-[16.64px]">Insurance with deductible buyback</p>
-                                                    <p class="text-gray-500 leading-[17px] text-[13px]">5 € / one-time</p>
+                                                    <p class="mb-[20px] text-[1.3rem] leading-[16.64px]">Insurance with deductible buyback</p>
+                                                    <p class="text-gray-500 leading-[17px] text-[1.3rem]">5 € / one-time</p>
                                                 </div>
                                             </div>
                                             
                                             <label class="flex items-center cursor-pointer max-[510px]:flex-col-reverse max-[510px]:gap-4 max-[510px]:items-end max-[510px]:text-end">
-                                                <span class="text-[11px] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
+                                                <span class="text-[1.1rem] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
                                                 <input type="checkbox" class="hidden peer">
                                                 <div class="w-[47px] h-[27px] bg-[#D6D6D6] rounded-full relative cursor-pointer peer-checked:bg-orange-500 [&>div]:peer-checked:translate-x-[20px]">
                                                     <div class="w-[19px] h-[19px] bg-white rounded-full absolute top-1 left-[4px] transition-all duration-300 "></div>
@@ -426,13 +316,13 @@
                                             </label>
                                     </div>
                                     
-                                    <p class="px-[22px] py-[19px] rounded-[5px] text-[12px] leading-[17px] bg-[#F1F3F9]">
+                                    <p class="px-[22px] py-[19px] rounded-[0.5rem] text-xs leading-[17px] bg-[#F1F3F9]">
                                         Opt for insurance with deductible buyback to eliminate your out-of-pocket expenses in case of an accident or damage.
                                     </p>
                                 </div>
 
                                 
-                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border-[1px] border-solid border-[#959595]">
+                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border border-solid border-[#959595]">
                                     <div class="flex justify-between mb-[20px] items-start">
                                             <div class="flex gap-[17px] font-grandis-md">
                                                 
@@ -442,13 +332,13 @@
                                                     </svg>
                                                 </i>
                                                 <div>
-                                                    <p class="mb-[20px] text-[13px] leading-[16.64px]">Insurance with deductible buyback</p>
-                                                    <p class="text-gray-500 leading-[17px] text-[13px]">5 € / one-time</p>
+                                                    <p class="mb-[20px] text-[1.3rem] leading-[16.64px]">Insurance with deductible buyback</p>
+                                                    <p class="text-gray-500 leading-[17px] text-[1.3rem]">5 € / one-time</p>
                                                 </div>
                                             </div>
                                             
                                             <label class="flex items-center max-[510px]:flex-col-reverse max-[510px]:gap-4 max-[510px]:items-end max-[510px]:text-end">
-                                                <span class="text-[11px] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
+                                                <span class="text-[1.1rem] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
                                                 <input type="checkbox" class="hidden peer">
                                                 <div class="w-[47px] h-[27px] bg-[#D6D6D6] rounded-full relative cursor-pointer peer-checked:bg-orange-500 [&>div]:peer-checked:translate-x-[20px]">
                                                     <div class="w-[19px] h-[19px] bg-white rounded-full absolute top-1 left-[4px] transition-all duration-300 "></div>
@@ -456,12 +346,12 @@
                                             </label>
                                     </div>
                                     
-                                    <p class="px-[22px] py-[19px] rounded-[5px] text-[12px] leading-[17px] bg-[#F1F3F9]">
+                                    <p class="px-[22px] py-[19px] rounded-[0.5rem] text-xs leading-[17px] bg-[#F1F3F9]">
                                         Opt for insurance with deductible buyback to eliminate your out-of-pocket expenses in case of an accident or damage.
                                     </p>
                                 </div>
 
-                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border-[1px] border-solid border-[#959595]">
+                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border border-solid border-[#959595]">
                                     <div class="flex justify-between mb-[20px] items-start">
                                             <div class="flex gap-[17px] font-grandis-md">
                                                 
@@ -471,13 +361,13 @@
                                                     </svg>
                                                 </i>
                                                 <div>
-                                                    <p class="mb-[20px] text-[13px] leading-[16.64px]">Insurance with deductible buyback</p>
-                                                    <p class="text-gray-500 leading-[17px] text-[13px]">5 € / one-time</p>
+                                                    <p class="mb-[20px] text-[1.3rem] leading-[16.64px]">Insurance with deductible buyback</p>
+                                                    <p class="text-gray-500 leading-[17px] text-[1.3rem]">5 € / one-time</p>
                                                 </div>
                                             </div>
                                             
                                             <label class="flex items-center max-[510px]:flex-col-reverse max-[510px]:gap-4 max-[510px]:items-end max-[510px]:text-end">
-                                                <span class="text-[11px] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
+                                                <span class="text-[1.1rem] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
                                                 <input type="checkbox" class="hidden peer">
                                                 <div class="w-[47px] h-[27px] bg-[#D6D6D6] rounded-full relative cursor-pointer peer-checked:bg-orange-500 [&>div]:peer-checked:translate-x-[20px]">
                                                     <div class="w-[19px] h-[19px] bg-white rounded-full absolute top-1 left-[4px] transition-all duration-300 "></div>
@@ -485,12 +375,12 @@
                                             </label>
                                     </div>
                                     
-                                    <p class="px-[22px] py-[19px] rounded-[5px] text-[12px] leading-[17px] bg-[#F1F3F9]">
+                                    <p class="px-[22px] py-[19px] rounded-[0.5rem] text-xs leading-[17px] bg-[#F1F3F9]">
                                         Opt for insurance with deductible buyback to eliminate your out-of-pocket expenses in case of an accident or damage.
                                     </p>
                                 </div>
 
-                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border-[1px] mb-[20px] border-solid border-[#959595]">
+                                <div class="px-[22px] pt-[20px] pb-[27px] rounded-lg border mb-[20px] border-solid border-[#959595]">
                                     <div class="flex justify-between mb-[20px] items-start">
                                             <div class="flex gap-[17px] font-grandis-md">
                                                 
@@ -500,13 +390,13 @@
                                                     </svg>
                                                 </i>
                                                 <div>
-                                                    <p class="mb-[20px] text-[13px] leading-[16.64px]">Insurance with deductible buyback</p>
-                                                    <p class="text-gray-500 leading-[17px] text-[13px]">5 € / one-time</p>
+                                                    <p class="mb-[20px] text-[1.3rem] leading-[16.64px]">Insurance with deductible buyback</p>
+                                                    <p class="text-gray-500 leading-[17px] text-[1.3rem]">5 € / one-time</p>
                                                 </div>
                                             </div>
                                             
                                             <label class="flex items-center max-[510px]:flex-col-reverse max-[510px]:gap-4 max-[510px]:items-end max-[510px]:text-end">
-                                                <span class="text-[11px] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
+                                                <span class="text-[1.1rem] font-grandis-md mr-[20px] max-[510px]:mr-0 cursor-pointer underline leading-[14.08px]">Close details</span>
                                                 <input type="checkbox" class="hidden peer">
                                                 <div class="w-[47px] h-[27px] bg-[#D6D6D6] rounded-full relative cursor-pointer peer-checked:bg-orange-500 [&>div]:peer-checked:translate-x-[20px]">
                                                     <div class="w-[19px] h-[19px] bg-white rounded-full absolute top-1 left-[4px] transition-all duration-300 "></div>
@@ -514,7 +404,7 @@
                                             </label>
                                     </div>
                                     
-                                    <p class="px-[22px] py-[19px] rounded-[5px] text-[12px] leading-[17px] bg-[#F1F3F9]">
+                                    <p class="px-[22px] py-[19px] rounded-[0.5rem] text-xs leading-[17px] bg-[#F1F3F9]">
                                         Opt for insurance with deductible buyback to eliminate your out-of-pocket expenses in case of an accident or damage.
                                     </p>
                                 </div>
@@ -523,7 +413,7 @@
                                 <div class="bg-[#007BFF] px-[22px] py-[20px] text-white rounded-lg mb-[20px]">
                                     <div class="flex justify-between items-center">
                                         <div class="text-start">
-                                            <span class="leading-[30.82px] text-[17px] font-grandis-bold">Total amount you will pay:</span>
+                                            <span class="leading-[30.82px] text-[1.7rem] font-grandis-bold">Total amount you will pay:</span>
                                             <p class="text-sm leading-[25.38px]">7 days</p>
                                         </div>
                                         <div class="text-end">
@@ -537,20 +427,20 @@
                                 <div class="px-[35px] pt-[25px] pb-[40px] rounded-lg shadow-[0px_1px_8px_rgba(0,0,0,0.13)] max-[490px]:py-[25px] max-[490px]:px-[20px]">
                                     <h3 class="text-[24px] leading-[30.72px] font-grandis-bold mb-[14px]">Who will drive?</h3>
                                     <p class="text-sm leading-[17.92px] mb-[32px]">Please fill in the information about the storyteller to complete your reservation. Fields marked with * are compulsory.</p>
-                                    <form action="" class="font-grandis-md text-[13px] leading-[16.64px] grid gap-[28px]">
+                                    <form action="" class="font-grandis-md text-[1.3rem] leading-[16.64px] grid gap-[28px]">
                                         <div class="grid grid-cols-2 gap-[22px] max-[490px]:grid-cols-1">
                                             <div class="flex flex-col gap-y-[14px]">
-                                                <label for="" class="font-grandis-md text-[13px] leading-[16.64px]">First name *</label>
-                                                <input type="text" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px]">
+                                                <label for="" class="font-grandis-md text-[1.3rem] leading-[16.64px]">First name *</label>
+                                                <input type="text" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none h-[50px]">
                                             </div>
                                             <div class="flex flex-col gap-y-[14px]">
-                                                <label for="" class="font-grandis-md text-[13px] leading-[16.64px]">Last name</label>
-                                                <input type="text" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px]">
+                                                <label for="" class="font-grandis-md text-[1.3rem] leading-[16.64px]">Last name</label>
+                                                <input type="text" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none h-[50px]">
                                             </div>
                                         </div>
                                         <div class="flex gap-[24px]">
                                             <div class="flex flex-col gap-y-[14px]">
-                                                <label class="font-grandis-md text-[13px] leading-[16.64px]">Country</label>
+                                                <label class="font-grandis-md text-[1.3rem] leading-[16.64px]">Country</label>
                                                 <div class="relative country-select">
                                                     
                                                     <select id="country-code" class="appearance-none bg-transparent">
@@ -560,29 +450,29 @@
                                             </div>
                                             <div class="flex flex-col gap-y-[14px] flex-1">
                                                 <label for="">Phone number *</label>
-                                                <input type="text" name="" id="" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px]">
+                                                <input type="text" name="" id="" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none h-[50px]">
                                             </div>
                                         </div>
                                         <div class="grid grid-cols-2 gap-[22px] max-[490px]:grid-cols-1">
                                             <div class="flex flex-col gap-y-[14px]">
-                                                <label for="" class="font-grandis-md text-[13px] leading-[16.64px]">First name *</label>
-                                                <input type="text" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px]">
+                                                <label for="" class="font-grandis-md text-[1.3rem] leading-[16.64px]">First name *</label>
+                                                <input type="text" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none h-[50px]">
                                             </div>
                                             <div class="flex flex-col gap-y-[14px]">
-                                                <label for="" class="font-grandis-md text-[13px] leading-[16.64px]">Last name</label>
-                                                <input type="text" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none h-[50px]">
+                                                <label for="" class="font-grandis-md text-[1.3rem] leading-[16.64px]">Last name</label>
+                                                <input type="text" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none h-[50px]">
                                                 <div class="flex items-center gap-2">
                                                     <input type="checkbox" id="no-plane" class="w-[11px] h-[11px] border-gray-500 rounded-[2px]">
-                                                    <label for="no-plane" class="text-gray-500 text-[13px] leading-[16.64px]">I don’t arrive by plane</label>
+                                                    <label for="no-plane" class="text-gray-500 text-[1.3rem] leading-[16.64px]">I don’t arrive by plane</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="flex flex-col gap-y-[14px]">
-                                            <label for="" class="font-grandis-md text-[13px] leading-[16.64px]">Message</label>
-                                            <textarea name="" id="" class="w-full rounded-[5px] border-solid border-[1px] border-gray-500 p-[15px] outline-none min-h-[150px]"></textarea>
+                                            <label for="" class="font-grandis-md text-[1.3rem] leading-[16.64px]">Message</label>
+                                            <textarea name="" id="" class="w-full rounded-[0.5rem] border-solid border border-gray-500 p-[1.5rem] outline-none min-h-[150px]"></textarea>
                                             <p class="text-gray-500 text-sm leading-[21.76px">I have read and accept the rental information, the terms and conditions, and the privacy policy.</p>
                                         </div>
-                                        <button class="font-grandis-md text-[17px] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[15px] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Book now</button>
+                                        <button class="font-grandis-md text-[1.7rem] leading-[21.76px] bg-orange-500 text-white rounded-lg p-[1.5rem] w-full hover:bg-[#ff7728] transition duration-300 ease-in" type="submit">Book now</button>
                                     </form>
                                 </div>
                             </div>
@@ -594,46 +484,46 @@
         </main>
         <footer class="bg-black pt-[48px] pb-[34px]">
             <div class="container max-w-full">
-                <div class="flex justify-between text-white pb-[88px] border-b-[1px] border-gray-500 max-md:flex-wrap max-md:gap-y-[40px]">
-                    <div class="[&>p]:font-grandis [&>p]:text-[11px] [&>p]:leading-[16.5px] [&>p]:text-[#D6D6D6] space-y-[24px] pr-[181px] max-lg:pr-[90px] max-md:w-full">
+                <div class="flex justify-between text-white pb-[88px] border-b border-gray-500 max-md:flex-wrap max-md:gap-y-[40px]">
+                    <div class="[&>p]:font-grandis [&>p]:text-[1.1rem] [&>p]:leading-[16.5px] [&>p]:text-[#D6D6D6] space-y-[24px] pr-[181px] max-lg:pr-[90px] max-md:w-full">
                         <img src="img/svg/logo.svg" alt="" class="mb-[32px]">
                         <p>123 Avenue des Palmiers, 40003 <br> Marrakech, Morocco</p>
                         <p>+212 705 050 166</p>
                         <p>ekscars@contact.com</p>
                     </div>
                     <div class="pr-[137px] max-lg:pr-[70px] max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Vehicles</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Vehicles</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Volkswagen</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Skoda</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Hyundai</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Dacia</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Citroën</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Renault</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Fiat</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Volkswagen</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Skoda</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Hyundai</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Dacia</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Citroën</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Renault</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Fiat</a></li>
                         </ul>
                     </div>
                 
                     <div class="pr-[33px] max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Services</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Services</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Casablanca</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Marrakech</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Tangier</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Long Term Car Rental in Marrakech</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car Rental with Driver</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Minibus Transfers</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Casablanca</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Marrakech</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car rental in Tangier</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Long Term Car Rental in Marrakech</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Car Rental with Driver</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Minibus Transfers</a></li>
                         </ul>
                     </div>
                 
                     <div class="max-md:w-[calc(100% / 3)]">
-                        <h3 class="font-grandis-md text-[15px] leading-[22.5px] mb-[30px]">Information</h3>
+                        <h3 class="font-grandis-md text-[1.5rem] leading-[22.5px] mb-[30px]">Information</h3>
                         <ul class="space-y-[14px]">
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Damage Management Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Deposit Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Privacy Policy</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms of Use</a></li>
-                            <li><a href="#" class="font-grandis text-[11px] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms & Conditions</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Damage Management Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Deposit Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms of Use</a></li>
+                            <li><a href="#" class="font-grandis text-[1.1rem] leading-[16.5px] text-[#D6D6D6] hover:text-orange-500 transition-colors duration-300">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
